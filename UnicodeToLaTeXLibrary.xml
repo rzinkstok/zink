@@ -1,5 +1,10 @@
 <characters>
   <latex-char>
+    <codepoint>10</codepoint>
+    <latexcode></latexcode>
+    <name>?</name>
+  </latex-char>
+  <latex-char>
     <codepoint>32</codepoint>
     <latexcode> </latexcode>
     <name>SPACE</name>
@@ -590,6 +595,11 @@
     <name>LATIN CAPITAL LETTER A WITH ACUTE</name>
   </latex-char>
   <latex-char>
+    <codepoint>194</codepoint>
+    <latexcode></latexcode>
+    <name>LATIN CAPITAL LETTER A WITH CIRCUMFLEX</name>
+  </latex-char>
+  <latex-char>
     <codepoint>196</codepoint>
     <latexcode>\"{A}</latexcode>
     <name>LATIN CAPITAL LETTER A WITH DIAERESIS</name>
@@ -785,6 +795,11 @@
     <name>LATIN SMALL LETTER U WITH ACUTE</name>
   </latex-char>
   <latex-char>
+    <codepoint>251</codepoint>
+    <latexcode>\^{u}</latexcode>
+    <name>LATIN SMALL LETTER U WITH CIRCUMFLEX</name>
+  </latex-char>
+  <latex-char>
     <codepoint>252</codepoint>
     <latexcode>\"{u}</latexcode>
     <name>LATIN SMALL LETTER U WITH DIAERESIS</name>
@@ -798,6 +813,11 @@
     <codepoint>268</codepoint>
     <latexcode>\v{C}</latexcode>
     <name>LATIN CAPITAL LETTER C WITH CARON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>269</codepoint>
+    <latexcode>\v{c}</latexcode>
+    <name>LATIN SMALL LETTER C WITH CARON</name>
   </latex-char>
   <latex-char>
     <codepoint>275</codepoint>
@@ -895,6 +915,11 @@
     <name>COMBINING DIAERESIS</name>
   </latex-char>
   <latex-char>
+    <codepoint>822</codepoint>
+    <latexcode></latexcode>
+    <name>COMBINING LONG STROKE OVERLAY</name>
+  </latex-char>
+  <latex-char>
     <codepoint>916</codepoint>
     <latexcode>\ensuremath{\Delta}</latexcode>
     <name>GREEK CAPITAL LETTER DELTA</name>
@@ -903,6 +928,11 @@
     <codepoint>921</codepoint>
     <latexcode>\ensuremath{\Iota}</latexcode>
     <name>GREEK CAPITAL LETTER IOTA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>931</codepoint>
+    <latexcode>\ensuremath{\Sigma}</latexcode>
+    <name>GREEK CAPITAL LETTER SIGMA</name>
   </latex-char>
   <latex-char>
     <codepoint>945</codepoint>
@@ -965,6 +995,11 @@
     <name>GREEK SMALL LETTER RHO</name>
   </latex-char>
   <latex-char>
+    <codepoint>963</codepoint>
+    <latexcode>\ensuremath{\sigma}</latexcode>
+    <name>GREEK SMALL LETTER SIGMA</name>
+  </latex-char>
+  <latex-char>
     <codepoint>964</codepoint>
     <latexcode>\ensuremath{\tau}</latexcode>
     <name>GREEK SMALL LETTER TAU</name>
@@ -990,6 +1025,11 @@
     <name>GREEK SMALL LETTER OMEGA</name>
   </latex-char>
   <latex-char>
+    <codepoint>981</codepoint>
+    <latexcode>\ensuremath{\phi}</latexcode>
+    <name>GREEK PHI SYMBOL</name>
+  </latex-char>
+  <latex-char>
     <codepoint>1111</codepoint>
     <latexcode>\"{i}</latexcode>
     <name>CYRILLIC SMALL LETTER YI</name>
@@ -1000,6 +1040,11 @@
     <name>LATIN SMALL LETTER U WITH HOOK ABOVE</name>
   </latex-char>
   <latex-char>
+    <codepoint>8195</codepoint>
+    <latexcode> </latexcode>
+    <name>EM SPACE</name>
+  </latex-char>
+  <latex-char>
     <codepoint>8197</codepoint>
     <latexcode>\hspace{0.25em}</latexcode>
     <name>FOUR-PER-EM SPACE</name>
@@ -1008,6 +1053,16 @@
     <codepoint>8203</codepoint>
     <latexcode></latexcode>
     <name>ZERO WIDTH SPACE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8208</codepoint>
+    <latexcode>-</latexcode>
+    <name>HYPHEN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8209</codepoint>
+    <latexcode>-</latexcode>
+    <name>NON-BREAKING HYPHEN</name>
   </latex-char>
   <latex-char>
     <codepoint>8211</codepoint>
@@ -1070,6 +1125,11 @@
     <name>HORIZONTAL ELLIPSIS</name>
   </latex-char>
   <latex-char>
+    <codepoint>8232</codepoint>
+    <latexcode></latexcode>
+    <name>LINE SEPARATOR</name>
+  </latex-char>
+  <latex-char>
     <codepoint>8236</codepoint>
     <latexcode>%POP DIRECTIONAL FORMATTINGG RTZ\n</latexcode>
     <name>POP DIRECTIONAL FORMATTING</name>
@@ -1098,6 +1158,11 @@
     <codepoint>8301</codepoint>
     <latexcode></latexcode>
     <name>ACTIVATE ARABIC FORM SHAPING</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8364</codepoint>
+    <latexcode>\euro{}</latexcode>
+    <name>EURO SIGN</name>
   </latex-char>
   <latex-char>
     <codepoint>8482</codepoint>
@@ -1148,6 +1213,16 @@
     <codepoint>8745</codepoint>
     <latexcode>\ensuremath{\cap}</latexcode>
     <name>INTERSECTION</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8764</codepoint>
+    <latexcode>\ensuremath{\sim}</latexcode>
+    <name>TILDE OPERATOR</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8776</codepoint>
+    <latexcode>\ensuremath{\approx}</latexcode>
+    <name>ALMOST EQUAL TO</name>
   </latex-char>
   <latex-char>
     <codepoint>8800</codepoint>
