@@ -1,0 +1,1802 @@
+<characters>
+  <latex-char>
+    <codepoint>32</codepoint>
+    <latexcode> </latexcode>
+    <name>SPACE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>33</codepoint>
+    <latexcode>!</latexcode>
+    <name>EXCLAMATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>34</codepoint>
+    <latexcode>\doublequotes </latexcode>
+    <name>QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>35</codepoint>
+    <latexcode>\#</latexcode>
+    <name>NUMBER SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>36</codepoint>
+    <latexcode>\$ </latexcode>
+    <name>DOLLAR SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>37</codepoint>
+    <latexcode>\%</latexcode>
+    <name>PERCENT SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>38</codepoint>
+    <latexcode>\&amp;</latexcode>
+    <name>AMPERSAND</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>39</codepoint>
+    <latexcode>'</latexcode>
+    <name>APOSTROPHE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>40</codepoint>
+    <latexcode>(</latexcode>
+    <name>LEFT PARENTHESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>41</codepoint>
+    <latexcode>)</latexcode>
+    <name>RIGHT PARENTHESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>42</codepoint>
+    <latexcode>\textasteriskcentered </latexcode>
+    <name>ASTERISK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>43</codepoint>
+    <latexcode>+</latexcode>
+    <name>PLUS SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>44</codepoint>
+    <latexcode>,</latexcode>
+    <name>COMMA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>45</codepoint>
+    <latexcode>{-}</latexcode>
+    <name>HYPHEN-MINUS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>46</codepoint>
+    <latexcode>.</latexcode>
+    <name>FULL STOP</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>47</codepoint>
+    <latexcode>/</latexcode>
+    <name>SOLIDUS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>48</codepoint>
+    <latexcode>0</latexcode>
+    <name>DIGIT ZERO</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>49</codepoint>
+    <latexcode>1</latexcode>
+    <name>DIGIT ONE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>50</codepoint>
+    <latexcode>2</latexcode>
+    <name>DIGIT TWO</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>51</codepoint>
+    <latexcode>3</latexcode>
+    <name>DIGIT THREE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>52</codepoint>
+    <latexcode>4</latexcode>
+    <name>DIGIT FOUR</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>53</codepoint>
+    <latexcode>5</latexcode>
+    <name>DIGIT FIVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>54</codepoint>
+    <latexcode>6</latexcode>
+    <name>DIGIT SIX</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>55</codepoint>
+    <latexcode>7</latexcode>
+    <name>DIGIT SEVEN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>56</codepoint>
+    <latexcode>8</latexcode>
+    <name>DIGIT EIGHT</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>57</codepoint>
+    <latexcode>9</latexcode>
+    <name>DIGIT NINE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>58</codepoint>
+    <latexcode>:</latexcode>
+    <name>COLON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>59</codepoint>
+    <latexcode>;</latexcode>
+    <name>SEMICOLON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>60</codepoint>
+    <latexcode>$&lt;$</latexcode>
+    <name>LESS-THAN SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>61</codepoint>
+    <latexcode>=</latexcode>
+    <name>EQUALS SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>62</codepoint>
+    <latexcode>$&gt;$</latexcode>
+    <name>GREATER-THAN SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>63</codepoint>
+    <latexcode>?</latexcode>
+    <name>QUESTION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>64</codepoint>
+    <latexcode>@</latexcode>
+    <name>COMMERCIAL AT</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>65</codepoint>
+    <latexcode>A</latexcode>
+    <name>LATIN CAPITAL LETTER A</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>66</codepoint>
+    <latexcode>B</latexcode>
+    <name>LATIN CAPITAL LETTER B</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>67</codepoint>
+    <latexcode>C</latexcode>
+    <name>LATIN CAPITAL LETTER C</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>68</codepoint>
+    <latexcode>D</latexcode>
+    <name>LATIN CAPITAL LETTER D</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>69</codepoint>
+    <latexcode>E</latexcode>
+    <name>LATIN CAPITAL LETTER E</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>70</codepoint>
+    <latexcode>F</latexcode>
+    <name>LATIN CAPITAL LETTER F</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>71</codepoint>
+    <latexcode>G</latexcode>
+    <name>LATIN CAPITAL LETTER G</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>72</codepoint>
+    <latexcode>H</latexcode>
+    <name>LATIN CAPITAL LETTER H</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>73</codepoint>
+    <latexcode>I</latexcode>
+    <name>LATIN CAPITAL LETTER I</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>74</codepoint>
+    <latexcode>J</latexcode>
+    <name>LATIN CAPITAL LETTER J</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>75</codepoint>
+    <latexcode>K</latexcode>
+    <name>LATIN CAPITAL LETTER K</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>76</codepoint>
+    <latexcode>L</latexcode>
+    <name>LATIN CAPITAL LETTER L</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>77</codepoint>
+    <latexcode>M</latexcode>
+    <name>LATIN CAPITAL LETTER M</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>78</codepoint>
+    <latexcode>N</latexcode>
+    <name>LATIN CAPITAL LETTER N</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>79</codepoint>
+    <latexcode>O</latexcode>
+    <name>LATIN CAPITAL LETTER O</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>80</codepoint>
+    <latexcode>P</latexcode>
+    <name>LATIN CAPITAL LETTER P</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>81</codepoint>
+    <latexcode>Q</latexcode>
+    <name>LATIN CAPITAL LETTER Q</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>82</codepoint>
+    <latexcode>R</latexcode>
+    <name>LATIN CAPITAL LETTER R</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>83</codepoint>
+    <latexcode>S</latexcode>
+    <name>LATIN CAPITAL LETTER S</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>84</codepoint>
+    <latexcode>T</latexcode>
+    <name>LATIN CAPITAL LETTER T</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>85</codepoint>
+    <latexcode>U</latexcode>
+    <name>LATIN CAPITAL LETTER U</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>86</codepoint>
+    <latexcode>V</latexcode>
+    <name>LATIN CAPITAL LETTER V</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>87</codepoint>
+    <latexcode>W</latexcode>
+    <name>LATIN CAPITAL LETTER W</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>88</codepoint>
+    <latexcode>X</latexcode>
+    <name>LATIN CAPITAL LETTER X</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>89</codepoint>
+    <latexcode>Y</latexcode>
+    <name>LATIN CAPITAL LETTER Y</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>90</codepoint>
+    <latexcode>Z</latexcode>
+    <name>LATIN CAPITAL LETTER Z</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>91</codepoint>
+    <latexcode>[</latexcode>
+    <name>LEFT SQUARE BRACKET</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>92</codepoint>
+    <latexcode>\textbackslash </latexcode>
+    <name>REVERSE SOLIDUS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>93</codepoint>
+    <latexcode>]</latexcode>
+    <name>RIGHT SQUARE BRACKET</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>95</codepoint>
+    <latexcode>\_ </latexcode>
+    <name>LOW LINE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>96</codepoint>
+    <latexcode>'</latexcode>
+    <name>GRAVE ACCENT</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>97</codepoint>
+    <latexcode>a</latexcode>
+    <name>LATIN SMALL LETTER A</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>98</codepoint>
+    <latexcode>b</latexcode>
+    <name>LATIN SMALL LETTER B</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>99</codepoint>
+    <latexcode>c</latexcode>
+    <name>LATIN SMALL LETTER C</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>100</codepoint>
+    <latexcode>d</latexcode>
+    <name>LATIN SMALL LETTER D</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>101</codepoint>
+    <latexcode>e</latexcode>
+    <name>LATIN SMALL LETTER E</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>102</codepoint>
+    <latexcode>f</latexcode>
+    <name>LATIN SMALL LETTER F</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>103</codepoint>
+    <latexcode>g</latexcode>
+    <name>LATIN SMALL LETTER G</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>104</codepoint>
+    <latexcode>h</latexcode>
+    <name>LATIN SMALL LETTER H</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>105</codepoint>
+    <latexcode>i</latexcode>
+    <name>LATIN SMALL LETTER I</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>106</codepoint>
+    <latexcode>j</latexcode>
+    <name>LATIN SMALL LETTER J</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>107</codepoint>
+    <latexcode>k</latexcode>
+    <name>LATIN SMALL LETTER K</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>108</codepoint>
+    <latexcode>l</latexcode>
+    <name>LATIN SMALL LETTER L</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>109</codepoint>
+    <latexcode>m</latexcode>
+    <name>LATIN SMALL LETTER M</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>110</codepoint>
+    <latexcode>n</latexcode>
+    <name>LATIN SMALL LETTER N</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>111</codepoint>
+    <latexcode>o</latexcode>
+    <name>LATIN SMALL LETTER O</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>112</codepoint>
+    <latexcode>p</latexcode>
+    <name>LATIN SMALL LETTER P</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>113</codepoint>
+    <latexcode>q</latexcode>
+    <name>LATIN SMALL LETTER Q</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>114</codepoint>
+    <latexcode>r</latexcode>
+    <name>LATIN SMALL LETTER R</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>115</codepoint>
+    <latexcode>s</latexcode>
+    <name>LATIN SMALL LETTER S</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>116</codepoint>
+    <latexcode>t</latexcode>
+    <name>LATIN SMALL LETTER T</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>117</codepoint>
+    <latexcode>u</latexcode>
+    <name>LATIN SMALL LETTER U</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>118</codepoint>
+    <latexcode>v</latexcode>
+    <name>LATIN SMALL LETTER V</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>119</codepoint>
+    <latexcode>w</latexcode>
+    <name>LATIN SMALL LETTER W</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>120</codepoint>
+    <latexcode>x</latexcode>
+    <name>LATIN SMALL LETTER X</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>121</codepoint>
+    <latexcode>y</latexcode>
+    <name>LATIN SMALL LETTER Y</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>122</codepoint>
+    <latexcode>z</latexcode>
+    <name>LATIN SMALL LETTER Z</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>123</codepoint>
+    <latexcode>\{</latexcode>
+    <name>LEFT CURLY BRACKET</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>124</codepoint>
+    <latexcode>\textbar{}</latexcode>
+    <name>VERTICAL LINE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>125</codepoint>
+    <latexcode>\}</latexcode>
+    <name>RIGHT CURLY BRACKET</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>126</codepoint>
+    <latexcode>\textasciitilde </latexcode>
+    <name>TILDE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>160</codepoint>
+    <latexcode> </latexcode>
+    <name>NO-BREAK SPACE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>162</codepoint>
+    <latexcode>\textcent </latexcode>
+    <name>CENT SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>163</codepoint>
+    <latexcode>\pounds </latexcode>
+    <name>POUND SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>165</codepoint>
+    <latexcode>\textyen </latexcode>
+    <name>YEN SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>166</codepoint>
+    <latexcode>\textbrokenbar </latexcode>
+    <name>BROKEN BAR</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>167</codepoint>
+    <latexcode>\S </latexcode>
+    <name>SECTION SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>169</codepoint>
+    <latexcode>\textcopyright{}</latexcode>
+    <name>COPYRIGHT SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>171</codepoint>
+    <latexcode>\guillemotleft </latexcode>
+    <name>LEFT-POINTING DOUBLE ANGLE QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>172</codepoint>
+    <latexcode>\ensuremath{\neg}</latexcode>
+    <name>NOT SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>174</codepoint>
+    <latexcode>\textregistered{}</latexcode>
+    <name>REGISTERED SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>176</codepoint>
+    <latexcode>\textdegree{}</latexcode>
+    <name>DEGREE SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>177</codepoint>
+    <latexcode>\textpm{}</latexcode>
+    <name>PLUS-MINUS SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>178</codepoint>
+    <latexcode>\textsuperscript{2}</latexcode>
+    <name>SUPERSCRIPT TWO</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>179</codepoint>
+    <latexcode>\textsuperscript{3}</latexcode>
+    <name>SUPERSCRIPT THREE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>180</codepoint>
+    <latexcode>`</latexcode>
+    <name>ACUTE ACCENT</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>181</codepoint>
+    <latexcode>\ensuremath{\mu}</latexcode>
+    <name>MICRO SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>182</codepoint>
+    <latexcode>\P{}</latexcode>
+    <name>PILCROW SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>183</codepoint>
+    <latexcode>\ensuremath{\cdot}</latexcode>
+    <name>MIDDLE DOT</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>186</codepoint>
+    <latexcode>\textdegree{}</latexcode>
+    <name>MASCULINE ORDINAL INDICATOR</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>187</codepoint>
+    <latexcode>\guillemotright </latexcode>
+    <name>RIGHT-POINTING DOUBLE ANGLE QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>189</codepoint>
+    <latexcode>\slantfrac{1}{2}</latexcode>
+    <name>VULGAR FRACTION ONE HALF</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>190</codepoint>
+    <latexcode>\sfrac{3}{4}</latexcode>
+    <name>VULGAR FRACTION THREE QUARTERS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>192</codepoint>
+    <latexcode>\`{A</latexcode>
+    <name>LATIN CAPITAL LETTER A WITH GRAVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>193</codepoint>
+    <latexcode>\'{A}</latexcode>
+    <name>LATIN CAPITAL LETTER A WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>196</codepoint>
+    <latexcode>\"{A}</latexcode>
+    <name>LATIN CAPITAL LETTER A WITH DIAERESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>201</codepoint>
+    <latexcode>\'{E}</latexcode>
+    <name>LATIN CAPITAL LETTER E WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>202</codepoint>
+    <latexcode>\^{E}</latexcode>
+    <name>LATIN CAPITAL LETTER E WITH CIRCUMFLEX</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>208</codepoint>
+    <latexcode>\DH </latexcode>
+    <name>LATIN CAPITAL LETTER ETH</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>210</codepoint>
+    <latexcode>\`{O}</latexcode>
+    <name>LATIN CAPITAL LETTER O WITH GRAVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>211</codepoint>
+    <latexcode>\'{O}</latexcode>
+    <name>LATIN CAPITAL LETTER O WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>212</codepoint>
+    <latexcode>\^{O}</latexcode>
+    <name>LATIN CAPITAL LETTER O WITH CIRCUMFLEX</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>213</codepoint>
+    <latexcode>\~{O}</latexcode>
+    <name>LATIN CAPITAL LETTER O WITH TILDE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>214</codepoint>
+    <latexcode>\"{O}</latexcode>
+    <name>LATIN CAPITAL LETTER O WITH DIAERESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>215</codepoint>
+    <latexcode>\ensuremath{\times}</latexcode>
+    <name>MULTIPLICATION SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>216</codepoint>
+    <latexcode>\O </latexcode>
+    <name>LATIN CAPITAL LETTER O WITH STROKE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>217</codepoint>
+    <latexcode>\`{U}</latexcode>
+    <name>LATIN CAPITAL LETTER U WITH GRAVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>218</codepoint>
+    <latexcode>\'{U}</latexcode>
+    <name>LATIN CAPITAL LETTER U WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>220</codepoint>
+    <latexcode>\"{U}</latexcode>
+    <name>LATIN CAPITAL LETTER U WITH DIAERESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>223</codepoint>
+    <latexcode>\ss{}</latexcode>
+    <name>LATIN SMALL LETTER SHARP S</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>224</codepoint>
+    <latexcode>\`{a}</latexcode>
+    <name>LATIN SMALL LETTER A WITH GRAVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>225</codepoint>
+    <latexcode>\'{a}</latexcode>
+    <name>LATIN SMALL LETTER A WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>226</codepoint>
+    <latexcode>\^{a}</latexcode>
+    <name>LATIN SMALL LETTER A WITH CIRCUMFLEX</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>227</codepoint>
+    <latexcode>\~{a}</latexcode>
+    <name>LATIN SMALL LETTER A WITH TILDE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>228</codepoint>
+    <latexcode>\"{a}</latexcode>
+    <name>LATIN SMALL LETTER A WITH DIAERESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>229</codepoint>
+    <latexcode>\r{a}</latexcode>
+    <name>LATIN SMALL LETTER A WITH RING ABOVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>230</codepoint>
+    <latexcode>\ae </latexcode>
+    <name>LATIN SMALL LETTER AE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>231</codepoint>
+    <latexcode>\c{c}</latexcode>
+    <name>LATIN SMALL LETTER C WITH CEDILLA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>232</codepoint>
+    <latexcode>\`{e}</latexcode>
+    <name>LATIN SMALL LETTER E WITH GRAVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>233</codepoint>
+    <latexcode>\'{e}</latexcode>
+    <name>LATIN SMALL LETTER E WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>234</codepoint>
+    <latexcode>\^{e}</latexcode>
+    <name>LATIN SMALL LETTER E WITH CIRCUMFLEX</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>235</codepoint>
+    <latexcode>\"{e}</latexcode>
+    <name>LATIN SMALL LETTER E WITH DIAERESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>237</codepoint>
+    <latexcode>\'{\i}</latexcode>
+    <name>LATIN SMALL LETTER I WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>238</codepoint>
+    <latexcode>\^{i}</latexcode>
+    <name>LATIN SMALL LETTER I WITH CIRCUMFLEX</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>239</codepoint>
+    <latexcode>\"{i}</latexcode>
+    <name>LATIN SMALL LETTER I WITH DIAERESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>241</codepoint>
+    <latexcode>\~{n}</latexcode>
+    <name>LATIN SMALL LETTER N WITH TILDE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>242</codepoint>
+    <latexcode>\`{o}</latexcode>
+    <name>LATIN SMALL LETTER O WITH GRAVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>243</codepoint>
+    <latexcode>\'{o}</latexcode>
+    <name>LATIN SMALL LETTER O WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>244</codepoint>
+    <latexcode>\^{o}</latexcode>
+    <name>LATIN SMALL LETTER O WITH CIRCUMFLEX</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>245</codepoint>
+    <latexcode>\~{o}</latexcode>
+    <name>LATIN SMALL LETTER O WITH TILDE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>246</codepoint>
+    <latexcode>\"{o}</latexcode>
+    <name>LATIN SMALL LETTER O WITH DIAERESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>248</codepoint>
+    <latexcode>\o </latexcode>
+    <name>LATIN SMALL LETTER O WITH STROKE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>249</codepoint>
+    <latexcode>\`{u}</latexcode>
+    <name>LATIN SMALL LETTER U WITH GRAVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>250</codepoint>
+    <latexcode>\'{u}</latexcode>
+    <name>LATIN SMALL LETTER U WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>252</codepoint>
+    <latexcode>\"{u}</latexcode>
+    <name>LATIN SMALL LETTER U WITH DIAERESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>263</codepoint>
+    <latexcode>\'{c}</latexcode>
+    <name>LATIN SMALL LETTER C WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>268</codepoint>
+    <latexcode>\v{C}</latexcode>
+    <name>LATIN CAPITAL LETTER C WITH CARON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>275</codepoint>
+    <latexcode>\={e}</latexcode>
+    <name>LATIN SMALL LETTER E WITH MACRON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>322</codepoint>
+    <latexcode>\l </latexcode>
+    <name>LATIN SMALL LETTER L WITH STROKE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>333</codepoint>
+    <latexcode>\overline{o}</latexcode>
+    <name>LATIN SMALL LETTER O WITH MACRON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>339</codepoint>
+    <latexcode>\oe </latexcode>
+    <name>LATIN SMALL LIGATURE OE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>345</codepoint>
+    <latexcode>\v{r}</latexcode>
+    <name>LATIN SMALL LETTER R WITH CARON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>347</codepoint>
+    <latexcode>\'{s}</latexcode>
+    <name>LATIN SMALL LETTER S WITH ACUTE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>353</codepoint>
+    <latexcode>\v{s}</latexcode>
+    <name>LATIN SMALL LETTER S WITH CARON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>361</codepoint>
+    <latexcode>\~{u}</latexcode>
+    <name>LATIN SMALL LETTER U WITH TILDE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>380</codepoint>
+    <latexcode>\.{z}</latexcode>
+    <name>LATIN SMALL LETTER Z WITH DOT ABOVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>381</codepoint>
+    <latexcode>\v{Z}</latexcode>
+    <name>LATIN CAPITAL LETTER Z WITH CARON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>382</codepoint>
+    <latexcode>\v{z}</latexcode>
+    <name>LATIN SMALL LETTER Z WITH CARON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>593</codepoint>
+    <latexcode>\textscripta </latexcode>
+    <name>LATIN SMALL LETTER ALPHA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>596</codepoint>
+    <latexcode>\textopeno </latexcode>
+    <name>LATIN SMALL LETTER OPEN O</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>603</codepoint>
+    <latexcode>\textepsilon </latexcode>
+    <name>LATIN SMALL LETTER OPEN E</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>618</codepoint>
+    <latexcode>\textsci </latexcode>
+    <name>LATIN LETTER SMALL CAPITAL I</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>710</codepoint>
+    <latexcode>\textasciicircum </latexcode>
+    <name>MODIFIER LETTER CIRCUMFLEX ACCENT</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>730</codepoint>
+    <latexcode>\textdegree{}</latexcode>
+    <name>RING ABOVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>732</codepoint>
+    <latexcode>\textasciitilde </latexcode>
+    <name>SMALL TILDE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>776</codepoint>
+    <latexcode>\"{}</latexcode>
+    <name>COMBINING DIAERESIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>916</codepoint>
+    <latexcode>\ensuremath{\Delta}</latexcode>
+    <name>GREEK CAPITAL LETTER DELTA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>921</codepoint>
+    <latexcode>\ensuremath{\Iota}</latexcode>
+    <name>GREEK CAPITAL LETTER IOTA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>945</codepoint>
+    <latexcode>\ensuremath{\alpha}</latexcode>
+    <name>GREEK SMALL LETTER ALPHA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>946</codepoint>
+    <latexcode>\ensuremath{\beta}</latexcode>
+    <name>GREEK SMALL LETTER BETA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>947</codepoint>
+    <latexcode>\ensuremath{\gamma}</latexcode>
+    <name>GREEK SMALL LETTER GAMMA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>948</codepoint>
+    <latexcode>\ensuremath{\delta}</latexcode>
+    <name>GREEK SMALL LETTER DELTA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>949</codepoint>
+    <latexcode>\ensuremath{\varepsilon}</latexcode>
+    <name>GREEK SMALL LETTER EPSILON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>951</codepoint>
+    <latexcode>\ensuremath{\eta}</latexcode>
+    <name>GREEK SMALL LETTER ETA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>953</codepoint>
+    <latexcode></latexcode>
+    <name>GREEK SMALL LETTER IOTA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>954</codepoint>
+    <latexcode>\ensuremath{\kappa}</latexcode>
+    <name>GREEK SMALL LETTER KAPPA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>955</codepoint>
+    <latexcode>\lambda{}</latexcode>
+    <name>GREEK SMALL LETTER LAMDA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>956</codepoint>
+    <latexcode>\ensuremath{\mu}</latexcode>
+    <name>GREEK SMALL LETTER MU</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>960</codepoint>
+    <latexcode>\ensuremath{\pi}</latexcode>
+    <name>GREEK SMALL LETTER PI</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>961</codepoint>
+    <latexcode>\ensuremath{\rho}</latexcode>
+    <name>GREEK SMALL LETTER RHO</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>964</codepoint>
+    <latexcode>\ensuremath{\tau}</latexcode>
+    <name>GREEK SMALL LETTER TAU</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>965</codepoint>
+    <latexcode>\ensuremath{\upsilon}</latexcode>
+    <name>GREEK SMALL LETTER UPSILON</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>966</codepoint>
+    <latexcode>$\phi$</latexcode>
+    <name>GREEK SMALL LETTER PHI</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>967</codepoint>
+    <latexcode>\ensuremath{\chi}</latexcode>
+    <name>GREEK SMALL LETTER CHI</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>969</codepoint>
+    <latexcode>\ensuremath{\omega}</latexcode>
+    <name>GREEK SMALL LETTER OMEGA</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>1111</codepoint>
+    <latexcode>\"{i}</latexcode>
+    <name>CYRILLIC SMALL LETTER YI</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>7911</codepoint>
+    <latexcode>\ovhook{u}</latexcode>
+    <name>LATIN SMALL LETTER U WITH HOOK ABOVE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8197</codepoint>
+    <latexcode>\hspace{0.25em}</latexcode>
+    <name>FOUR-PER-EM SPACE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8203</codepoint>
+    <latexcode></latexcode>
+    <name>ZERO WIDTH SPACE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8211</codepoint>
+    <latexcode>{--}</latexcode>
+    <name>EN DASH</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8212</codepoint>
+    <latexcode>{---}</latexcode>
+    <name>EM DASH</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8216</codepoint>
+    <latexcode>`</latexcode>
+    <name>LEFT SINGLE QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8217</codepoint>
+    <latexcode>'</latexcode>
+    <name>RIGHT SINGLE QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8218</codepoint>
+    <latexcode>\quotesinglbase </latexcode>
+    <name>SINGLE LOW-9 QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8220</codepoint>
+    <latexcode>``</latexcode>
+    <name>LEFT DOUBLE QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8221</codepoint>
+    <latexcode>''</latexcode>
+    <name>RIGHT DOUBLE QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8222</codepoint>
+    <latexcode>\quotedblbase </latexcode>
+    <name>DOUBLE LOW-9 QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8224</codepoint>
+    <latexcode>\dagger </latexcode>
+    <name>DAGGER</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8225</codepoint>
+    <latexcode>\ddag{}</latexcode>
+    <name>DOUBLE DAGGER</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8226</codepoint>
+    <latexcode>\textbullet{}</latexcode>
+    <name>BULLET</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8230</codepoint>
+    <latexcode>\ldots </latexcode>
+    <name>HORIZONTAL ELLIPSIS</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8236</codepoint>
+    <latexcode>%POP DIRECTIONAL FORMATTINGG RTZ\n</latexcode>
+    <name>POP DIRECTIONAL FORMATTING</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8242</codepoint>
+    <latexcode>'</latexcode>
+    <name>PRIME</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8249</codepoint>
+    <latexcode>\guilsinglleft </latexcode>
+    <name>SINGLE LEFT-POINTING ANGLE QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8250</codepoint>
+    <latexcode>\guilsinglright </latexcode>
+    <name>SINGLE RIGHT-POINTING ANGLE QUOTATION MARK</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8260</codepoint>
+    <latexcode>/</latexcode>
+    <name>FRACTION SLASH</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8301</codepoint>
+    <latexcode></latexcode>
+    <name>ACTIVATE ARABIC FORM SHAPING</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8482</codepoint>
+    <latexcode>\texttrademark </latexcode>
+    <name>TRADE MARK SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8593</codepoint>
+    <latexcode>\ensuremath{\uparrow}</latexcode>
+    <name>UPWARDS ARROW</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8595</codepoint>
+    <latexcode>\ensuremath{\downarrow}</latexcode>
+    <name>DOWNWARDS ARROW</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8596</codepoint>
+    <latexcode>\ensuremath{\leftrightarrow}</latexcode>
+    <name>LEFT RIGHT ARROW</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8681</codepoint>
+    <latexcode>\Downarrow </latexcode>
+    <name>DOWNWARDS WHITE ARROW</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8706</codepoint>
+    <latexcode>∂</latexcode>
+    <name>PARTIAL DIFFERENTIAL</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8710</codepoint>
+    <latexcode>\ensuremath{\Delta}</latexcode>
+    <name>INCREMENT</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8722</codepoint>
+    <latexcode>$-$</latexcode>
+    <name>MINUS SIGN</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8734</codepoint>
+    <latexcode>$\infty$</latexcode>
+    <name>INFINITY</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8745</codepoint>
+    <latexcode>\ensuremath{\cap}</latexcode>
+    <name>INTERSECTION</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8800</codepoint>
+    <latexcode>$\neq$</latexcode>
+    <name>NOT EQUAL TO</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8804</codepoint>
+    <latexcode>\ensuremath{\leq}</latexcode>
+    <name>LESS-THAN OR EQUAL TO</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>8805</codepoint>
+    <latexcode>\ensuremath{\geq}</latexcode>
+    <name>GREATER-THAN OR EQUAL TO</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>9472</codepoint>
+    <latexcode>{--}</latexcode>
+    <name>BOX DRAWINGS LIGHT HORIZONTAL</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>9474</codepoint>
+    <latexcode>\textbar </latexcode>
+    <name>BOX DRAWINGS LIGHT VERTICAL</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>9632</codepoint>
+    <latexcode>\ensuremath{\blacksquare}</latexcode>
+    <name>BLACK SQUARE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>9633</codepoint>
+    <latexcode>$\square$</latexcode>
+    <name>WHITE SQUARE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>9675</codepoint>
+    <latexcode>\ensuremath{\circ}</latexcode>
+    <name>WHITE CIRCLE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>9679</codepoint>
+    <latexcode>\ensuremath{\bullet}</latexcode>
+    <name>BLACK CIRCLE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>9786</codepoint>
+    <latexcode>\smiley{}</latexcode>
+    <name>WHITE SMILING FACE</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>9830</codepoint>
+    <latexcode>\vardiamond{}</latexcode>
+    <name>BLACK DIAMOND SUIT</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>10132</codepoint>
+    <latexcode>\ensuremath{\rightarrow}</latexcode>
+    <name>HEAVY WIDE-HEADED RIGHTWARDS ARROW</name>
+  </latex-char>
+  <latex-char>
+    <codepoint>64257</codepoint>
+    <latexcode>fi</latexcode>
+    <name>LATIN SMALL LIGATURE FI</name>
+  </latex-char>
+  <xelatex-char>
+    <codepoint>32</codepoint>
+    <xelatexcode> </xelatexcode>
+    <name>SPACE</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>41</codepoint>
+    <xelatexcode>)</xelatexcode>
+    <name>RIGHT PARENTHESIS</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>45</codepoint>
+    <xelatexcode>{-}</xelatexcode>
+    <name>HYPHEN-MINUS</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>47</codepoint>
+    <xelatexcode>/</xelatexcode>
+    <name>SOLIDUS</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>916</codepoint>
+    <xelatexcode>Δ</xelatexcode>
+    <name>GREEK CAPITAL LETTER DELTA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>940</codepoint>
+    <xelatexcode>ά</xelatexcode>
+    <name>GREEK SMALL LETTER ALPHA WITH TONOS</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>945</codepoint>
+    <xelatexcode>α</xelatexcode>
+    <name>GREEK SMALL LETTER ALPHA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>946</codepoint>
+    <xelatexcode>β</xelatexcode>
+    <name>GREEK SMALL LETTER BETA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>947</codepoint>
+    <xelatexcode>γ</xelatexcode>
+    <name>GREEK SMALL LETTER GAMMA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>949</codepoint>
+    <xelatexcode>ε</xelatexcode>
+    <name>GREEK SMALL LETTER EPSILON</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>951</codepoint>
+    <xelatexcode>η</xelatexcode>
+    <name>GREEK SMALL LETTER ETA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>952</codepoint>
+    <xelatexcode>θ</xelatexcode>
+    <name>GREEK SMALL LETTER THETA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>953</codepoint>
+    <xelatexcode>ι</xelatexcode>
+    <name>GREEK SMALL LETTER IOTA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>954</codepoint>
+    <xelatexcode>κ</xelatexcode>
+    <name>GREEK SMALL LETTER KAPPA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>955</codepoint>
+    <xelatexcode>λ</xelatexcode>
+    <name>GREEK SMALL LETTER LAMDA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>956</codepoint>
+    <xelatexcode>μ</xelatexcode>
+    <name>GREEK SMALL LETTER MU</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>957</codepoint>
+    <xelatexcode>ν</xelatexcode>
+    <name>GREEK SMALL LETTER NU</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>959</codepoint>
+    <xelatexcode>ο</xelatexcode>
+    <name>GREEK SMALL LETTER OMICRON</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>960</codepoint>
+    <xelatexcode>π</xelatexcode>
+    <name>GREEK SMALL LETTER PI</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>961</codepoint>
+    <xelatexcode>ρ</xelatexcode>
+    <name>GREEK SMALL LETTER RHO</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>962</codepoint>
+    <xelatexcode>ς</xelatexcode>
+    <name>GREEK SMALL LETTER FINAL SIGMA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>964</codepoint>
+    <xelatexcode>τ</xelatexcode>
+    <name>GREEK SMALL LETTER TAU</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>965</codepoint>
+    <xelatexcode>υ</xelatexcode>
+    <name>GREEK SMALL LETTER UPSILON</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>969</codepoint>
+    <xelatexcode>ω</xelatexcode>
+    <name>GREEK SMALL LETTER OMEGA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>972</codepoint>
+    <xelatexcode>ό</xelatexcode>
+    <name>GREEK SMALL LETTER OMICRON WITH TONOS</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>8016</codepoint>
+    <xelatexcode>ὐ</xelatexcode>
+    <name>GREEK SMALL LETTER UPSILON WITH PSILI</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>8048</codepoint>
+    <xelatexcode>ὰ</xelatexcode>
+    <name>GREEK SMALL LETTER ALPHA WITH VARIA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>8054</codepoint>
+    <xelatexcode>ὶ</xelatexcode>
+    <name>GREEK SMALL LETTER IOTA WITH VARIA</name>
+  </xelatex-char>
+  <xelatex-char>
+    <codepoint>8056</codepoint>
+    <xelatexcode>ὸ</xelatexcode>
+    <name>GREEK SMALL LETTER OMICRON WITH VARIA</name>
+  </xelatex-char>
+  <latex-math-char>
+    <codepoint>32</codepoint>
+    <latexmathcode></latexmathcode>
+    <name>SPACE</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>39</codepoint>
+    <latexmathcode>'</latexmathcode>
+    <name>APOSTROPHE</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>40</codepoint>
+    <latexmathcode>\left(</latexmathcode>
+    <name>LEFT PARENTHESIS</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>41</codepoint>
+    <latexmathcode>\right)</latexmathcode>
+    <name>RIGHT PARENTHESIS</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>42</codepoint>
+    <latexmathcode>*</latexmathcode>
+    <name>ASTERISK</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>43</codepoint>
+    <latexmathcode>+</latexmathcode>
+    <name>PLUS SIGN</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>44</codepoint>
+    <latexmathcode>,</latexmathcode>
+    <name>COMMA</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>45</codepoint>
+    <latexmathcode>-</latexmathcode>
+    <name>HYPHEN-MINUS</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>48</codepoint>
+    <latexmathcode>0</latexmathcode>
+    <name>DIGIT ZERO</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>49</codepoint>
+    <latexmathcode>1</latexmathcode>
+    <name>DIGIT ONE</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>50</codepoint>
+    <latexmathcode>2</latexmathcode>
+    <name>DIGIT TWO</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>51</codepoint>
+    <latexmathcode>3</latexmathcode>
+    <name>DIGIT THREE</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>52</codepoint>
+    <latexmathcode>4</latexmathcode>
+    <name>DIGIT FOUR</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>53</codepoint>
+    <latexmathcode>5</latexmathcode>
+    <name>DIGIT FIVE</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>54</codepoint>
+    <latexmathcode>6</latexmathcode>
+    <name>DIGIT SIX</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>55</codepoint>
+    <latexmathcode>7</latexmathcode>
+    <name>DIGIT SEVEN</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>56</codepoint>
+    <latexmathcode>8</latexmathcode>
+    <name>DIGIT EIGHT</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>57</codepoint>
+    <latexmathcode>9</latexmathcode>
+    <name>DIGIT NINE</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>60</codepoint>
+    <latexmathcode>&lt;</latexmathcode>
+    <name>LESS-THAN SIGN</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>61</codepoint>
+    <latexmathcode>=</latexmathcode>
+    <name>EQUALS SIGN</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>62</codepoint>
+    <latexmathcode>&gt;</latexmathcode>
+    <name>GREATER-THAN SIGN</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>65</codepoint>
+    <latexmathcode>A</latexmathcode>
+    <name>LATIN CAPITAL LETTER A</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>67</codepoint>
+    <latexmathcode>C</latexmathcode>
+    <name>LATIN CAPITAL LETTER C</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>68</codepoint>
+    <latexmathcode>D</latexmathcode>
+    <name>LATIN CAPITAL LETTER D</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>69</codepoint>
+    <latexmathcode>E</latexmathcode>
+    <name>LATIN CAPITAL LETTER E</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>70</codepoint>
+    <latexmathcode>F</latexmathcode>
+    <name>LATIN CAPITAL LETTER F</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>71</codepoint>
+    <latexmathcode>G</latexmathcode>
+    <name>LATIN CAPITAL LETTER G</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>73</codepoint>
+    <latexmathcode>I</latexmathcode>
+    <name>LATIN CAPITAL LETTER I</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>75</codepoint>
+    <latexmathcode>K</latexmathcode>
+    <name>LATIN CAPITAL LETTER K</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>76</codepoint>
+    <latexmathcode>L</latexmathcode>
+    <name>LATIN CAPITAL LETTER L</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>77</codepoint>
+    <latexmathcode>M</latexmathcode>
+    <name>LATIN CAPITAL LETTER M</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>78</codepoint>
+    <latexmathcode>N</latexmathcode>
+    <name>LATIN CAPITAL LETTER N</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>79</codepoint>
+    <latexmathcode>O</latexmathcode>
+    <name>LATIN CAPITAL LETTER O</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>80</codepoint>
+    <latexmathcode>P</latexmathcode>
+    <name>LATIN CAPITAL LETTER P</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>81</codepoint>
+    <latexmathcode>Q</latexmathcode>
+    <name>LATIN CAPITAL LETTER Q</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>82</codepoint>
+    <latexmathcode>R</latexmathcode>
+    <name>LATIN CAPITAL LETTER R</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>83</codepoint>
+    <latexmathcode>S</latexmathcode>
+    <name>LATIN CAPITAL LETTER S</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>84</codepoint>
+    <latexmathcode>T</latexmathcode>
+    <name>LATIN CAPITAL LETTER T</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>85</codepoint>
+    <latexmathcode>U</latexmathcode>
+    <name>LATIN CAPITAL LETTER U</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>86</codepoint>
+    <latexmathcode>V</latexmathcode>
+    <name>LATIN CAPITAL LETTER V</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>88</codepoint>
+    <latexmathcode>X</latexmathcode>
+    <name>LATIN CAPITAL LETTER X</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>89</codepoint>
+    <latexmathcode>Y</latexmathcode>
+    <name>LATIN CAPITAL LETTER Y</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>95</codepoint>
+    <latexmathcode>\_ </latexmathcode>
+    <name>LOW LINE</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>97</codepoint>
+    <latexmathcode>a</latexmathcode>
+    <name>LATIN SMALL LETTER A</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>99</codepoint>
+    <latexmathcode>c</latexmathcode>
+    <name>LATIN SMALL LETTER C</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>100</codepoint>
+    <latexmathcode>d</latexmathcode>
+    <name>LATIN SMALL LETTER D</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>101</codepoint>
+    <latexmathcode>e</latexmathcode>
+    <name>LATIN SMALL LETTER E</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>102</codepoint>
+    <latexmathcode>f</latexmathcode>
+    <name>LATIN SMALL LETTER F</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>103</codepoint>
+    <latexmathcode>g</latexmathcode>
+    <name>LATIN SMALL LETTER G</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>104</codepoint>
+    <latexmathcode>h</latexmathcode>
+    <name>LATIN SMALL LETTER H</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>105</codepoint>
+    <latexmathcode>i</latexmathcode>
+    <name>LATIN SMALL LETTER I</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>106</codepoint>
+    <latexmathcode>j</latexmathcode>
+    <name>LATIN SMALL LETTER J</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>107</codepoint>
+    <latexmathcode>k</latexmathcode>
+    <name>LATIN SMALL LETTER K</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>108</codepoint>
+    <latexmathcode>l</latexmathcode>
+    <name>LATIN SMALL LETTER L</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>109</codepoint>
+    <latexmathcode>m</latexmathcode>
+    <name>LATIN SMALL LETTER M</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>110</codepoint>
+    <latexmathcode>n</latexmathcode>
+    <name>LATIN SMALL LETTER N</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>111</codepoint>
+    <latexmathcode>o</latexmathcode>
+    <name>LATIN SMALL LETTER O</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>112</codepoint>
+    <latexmathcode>p</latexmathcode>
+    <name>LATIN SMALL LETTER P</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>113</codepoint>
+    <latexmathcode>q</latexmathcode>
+    <name>LATIN SMALL LETTER Q</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>114</codepoint>
+    <latexmathcode>r</latexmathcode>
+    <name>LATIN SMALL LETTER R</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>115</codepoint>
+    <latexmathcode>s</latexmathcode>
+    <name>LATIN SMALL LETTER S</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>116</codepoint>
+    <latexmathcode>t</latexmathcode>
+    <name>LATIN SMALL LETTER T</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>117</codepoint>
+    <latexmathcode>u</latexmathcode>
+    <name>LATIN SMALL LETTER U</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>118</codepoint>
+    <latexmathcode>v</latexmathcode>
+    <name>LATIN SMALL LETTER V</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>119</codepoint>
+    <latexmathcode>w</latexmathcode>
+    <name>LATIN SMALL LETTER W</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>120</codepoint>
+    <latexmathcode>x</latexmathcode>
+    <name>LATIN SMALL LETTER X</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>121</codepoint>
+    <latexmathcode>y</latexmathcode>
+    <name>LATIN SMALL LETTER Y</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>122</codepoint>
+    <latexmathcode>z</latexmathcode>
+    <name>LATIN SMALL LETTER Z</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>124</codepoint>
+    <latexmathcode>|</latexmathcode>
+    <name>VERTICAL LINE</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>215</codepoint>
+    <latexmathcode>\times </latexmathcode>
+    <name>MULTIPLICATION SIGN</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>937</codepoint>
+    <latexmathcode>\Omega </latexmathcode>
+    <name>GREEK CAPITAL LETTER OMEGA</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>945</codepoint>
+    <latexmathcode>\alpha </latexmathcode>
+    <name>GREEK SMALL LETTER ALPHA</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>946</codepoint>
+    <latexmathcode>\beta </latexmathcode>
+    <name>GREEK SMALL LETTER BETA</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>947</codepoint>
+    <latexmathcode>\gamma </latexmathcode>
+    <name>GREEK SMALL LETTER GAMMA</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>949</codepoint>
+    <latexmathcode>\varepsilon </latexmathcode>
+    <name>GREEK SMALL LETTER EPSILON</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>956</codepoint>
+    <latexmathcode>\mu </latexmathcode>
+    <name>GREEK SMALL LETTER MU</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>960</codepoint>
+    <latexmathcode>\pi </latexmathcode>
+    <name>GREEK SMALL LETTER PI</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>969</codepoint>
+    <latexmathcode>\omega </latexmathcode>
+    <name>GREEK SMALL LETTER OMEGA</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>981</codepoint>
+    <latexmathcode>\phi </latexmathcode>
+    <name>GREEK PHI SYMBOL</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>1009</codepoint>
+    <latexmathcode>\varrho </latexmathcode>
+    <name>GREEK RHO SYMBOL</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>1013</codepoint>
+    <latexmathcode>\epsilon </latexmathcode>
+    <name>GREEK LUNATE EPSILON SYMBOL</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>8230</codepoint>
+    <latexmathcode>\ldots </latexmathcode>
+    <name>HORIZONTAL ELLIPSIS</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>8710</codepoint>
+    <latexmathcode>\Delta </latexmathcode>
+    <name>INCREMENT</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>8712</codepoint>
+    <latexmathcode>\in </latexmathcode>
+    <name>ELEMENT OF</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>8721</codepoint>
+    <latexmathcode>\sum </latexmathcode>
+    <name>N-ARY SUMMATION</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>8800</codepoint>
+    <latexmathcode>\neq </latexmathcode>
+    <name>NOT EQUAL TO</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>8804</codepoint>
+    <latexmathcode>\leq </latexmathcode>
+    <name>LESS-THAN OR EQUAL TO</name>
+  </latex-math-char>
+  <latex-math-char>
+    <codepoint>8805</codepoint>
+    <latexmathcode>\geq </latexmathcode>
+    <name>GREATER-THAN OR EQUAL TO</name>
+  </latex-math-char>
+</characters>

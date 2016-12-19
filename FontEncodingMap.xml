@@ -1,0 +1,903 @@
+<fontconversion>
+    <font name='Wingdings'>
+        <codepoint>
+            <name>WHITE SMILING FACE</name>
+            <original>61514</original>
+            <unicode>9786</unicode>
+        </codepoint>
+        <codepoint>
+            <name>WHITE SQUARE</name>
+            <original>61551</original>
+            <unicode>9633</unicode>
+        </codepoint>
+        <codepoint>
+            <name>WHITE SQUARE</name>
+            <original>61608</original>
+            <unicode>9633</unicode>
+        </codepoint>
+        <codepoint>
+            <name>WHITE SQUARE</name>
+            <original>61664</original>
+            <unicode>10132</unicode>
+        </codepoint>
+    </font>
+	<font name='Symbol'>
+		<codepoint>
+			<name>SPACE</name>
+			<original>61472</original>
+			<unicode>32</unicode>
+		</codepoint>
+		<codepoint>
+			<name>RIGHT PARENTHESIS</name>
+			<original>61481</original>
+			<unicode>41</unicode>
+		</codepoint>
+		<codepoint>
+			<name>HYPHEN-MINUS</name>
+			<original>61485</original>
+			<unicode>45</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SOLIDUS</name>
+			<original>61487</original>
+			<unicode>47</unicode>
+		</codepoint>
+		<codepoint>
+			<name>GREEK CAPITAL LETTER DELTA</name>
+			<original>61508</original>
+			<unicode>916</unicode>
+		</codepoint>
+		<codepoint>
+			<name>LOW LINE</name>
+			<original>61535</original>
+			<unicode>95</unicode>
+		</codepoint>
+		<codepoint>
+			<name>GREEK SMALL LETTER ALPHA</name>
+			<original>61537</original>
+			<unicode>945</unicode>
+		</codepoint>
+		<codepoint>
+			<name>GREEK SMALL LETTER BETA</name>
+			<original>61538</original>
+			<unicode>946</unicode>
+		</codepoint>
+		<codepoint>
+			<name>GREEK SMALL LETTER CHI</name>
+			<original>61539</original>
+			<unicode>967</unicode>
+		</codepoint>
+		<codepoint>
+			<name>GREEK SMALL LETTER EPSILON</name>
+			<original>61541</original>
+			<unicode>949</unicode>
+		</codepoint>
+		<codepoint>
+			<name>GREEK SMALL LETTER GAMMA</name>
+			<original>61543</original>
+			<unicode>947</unicode>
+		</codepoint>
+		<codepoint>
+			<name>GREEK SMALL LETTER KAPPA</name>
+			<original>61547</original>
+			<unicode>954</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL LAMBDA</name>
+			<original>61564</original>
+			<unicode>955</unicode>
+		</codepoint>
+		<codepoint>
+			<name>GREEK SMALL LETTER MU</name>
+			<original>61549</original>
+			<unicode>956</unicode>
+		</codepoint>
+		<codepoint>
+			<name>LESS-THAN OR EQUAL TO</name>
+			<original>61603</original>
+			<unicode>8804</unicode>
+		</codepoint>
+		<codepoint>
+			<name>PLUS-MINUS SIGN</name>
+			<original>61617</original>
+			<unicode>177</unicode>
+		</codepoint>
+	</font>
+	<font name='Greek'>
+		<codepoint>
+			<name>SPACE</name>
+			<original>32</original>
+			<unicode>32</unicode>
+		</codepoint>
+		<codepoint>
+			<name>COMMA</name>
+			<original>44</original>
+			<unicode>44</unicode>
+		</codepoint>
+		<codepoint>
+			<name>FULL STOP</name>
+			<original>46</original>
+			<unicode>46</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SEMICOLON</name>
+			<original>59</original>
+			<unicode>59</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL ALPHA</name>
+			<original>65</original>
+			<unicode>913</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL BETA</name>
+			<original>66</original>
+			<unicode>914</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL CHI</name>
+			<original>67</original>
+			<unicode>935</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL DELTA</name>
+			<original>68</original>
+			<unicode>916</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL EPSILON</name>
+			<original>69</original>
+			<unicode>917</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL PHI</name>
+			<original>70</original>
+			<unicode>934</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL GAMMA</name>
+			<original>71</original>
+			<unicode>915</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL ETA</name>
+			<original>72</original>
+			<unicode>919</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL IOTA</name>
+			<original>73</original>
+			<unicode>921</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL KAPPA</name>
+			<original>75</original>
+			<unicode>922</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL LAMBDA</name>
+			<original>76</original>
+			<unicode>923</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL MU</name>
+			<original>77</original>
+			<unicode>924</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL NU</name>
+			<original>78</original>
+			<unicode>925</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL OMICRON</name>
+			<original>79</original>
+			<unicode>927</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL PI</name>
+			<original>80</original>
+			<unicode>928</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL THETA</name>
+			<original>81</original>
+			<unicode>920</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL RHO</name>
+			<original>82</original>
+			<unicode>929</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL SIGMA</name>
+			<original>83</original>
+			<unicode>931</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL TAU</name>
+			<original>84</original>
+			<unicode>932</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL UPSILON</name>
+			<original>85</original>
+			<unicode>933</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL OMEGA</name>
+			<original>87</original>
+			<unicode>937</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL XI</name>
+			<original>88</original>
+			<unicode>926</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL PSI</name>
+			<original>89</original>
+			<unicode>936</unicode>
+		</codepoint>
+		<codepoint>
+			<name>CAPITAL ZETA</name>
+			<original>90</original>
+			<unicode>918</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA</name>
+			<original>97</original>
+			<unicode>945</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL BETA</name>
+			<original>98</original>
+			<unicode>946</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL CHI</name>
+			<original>99</original>
+			<unicode>967</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL DELTA</name>
+			<original>100</original>
+			<unicode>948</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL EPSILON</name>
+			<original>101</original>
+			<unicode>949</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL PHI</name>
+			<original>102</original>
+			<unicode>966</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL GAMMA</name>
+			<original>103</original>
+			<unicode>947</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA</name>
+			<original>104</original>
+			<unicode>951</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA</name>
+			<original>105</original>
+			<unicode>953</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL FINAL SIGMA</name>
+			<original>106</original>
+			<unicode>962</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL KAPPA</name>
+			<original>107</original>
+			<unicode>954</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL LAMBDA</name>
+			<original>108</original>
+			<unicode>955</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL MU</name>
+			<original>109</original>
+			<unicode>956</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL NU</name>
+			<original>110</original>
+			<unicode>957</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMICRON</name>
+			<original>111</original>
+			<unicode>959</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL PI</name>
+			<original>112</original>
+			<unicode>960</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL THETA</name>
+			<original>113</original>
+			<unicode>952</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL RHO</name>
+			<original>114</original>
+			<unicode>961</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL SIGMA</name>
+			<original>115</original>
+			<unicode>963</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL TAU</name>
+			<original>116</original>
+			<unicode>964</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON</name>
+			<original>117</original>
+			<unicode>965</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA</name>
+			<original>119</original>
+			<unicode>969</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL XI</name>
+			<original>120</original>
+			<unicode>958</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL PSI</name>
+			<original>121</original>
+			<unicode>968</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ZETA</name>
+			<original>122</original>
+			<unicode>950</unicode>
+		</codepoint>
+		<codepoint>
+			<name>LEFT CURLY BRACKET</name>
+			<original>123</original>
+			<unicode>123</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH DASIA</name>
+			<original>161</original>
+			<unicode>7937</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH PSILI</name>
+			<original>162</original>
+			<unicode>7936</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH TONOS</name>
+			<original>163</original>
+			<unicode>940</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH DASIA AND OXIA</name>
+			<original>164</original>
+			<unicode>7941</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH PSILI AND OXIA</name>
+			<original>165</original>
+			<unicode>7940</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH VARIA</name>
+			<original>166</original>
+			<unicode>8048</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH DASIA AND VARIA</name>
+			<original>167</original>
+			<unicode>7939</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH PSILI AND VARIA</name>
+			<original>168</original>
+			<unicode>7938</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH PERISPOMENI</name>
+			<original>169</original>
+			<unicode>8118</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH DASIA AND PERISPOMENI</name>
+			<original>170</original>
+			<unicode>7943</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH PSILI AND PERISPOMENI</name>
+			<original>171</original>
+			<unicode>7942</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH DASIA AND YPOGEGRAMMENI</name>
+			<original>172</original>
+			<unicode>8065</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH OXIA AND YPOGEGRAMMENI</name>
+			<original>174</original>
+			<unicode>8116</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH DASIA AND OXIA AND YPOGEGRAMMENI</name>
+			<original>175</original>
+			<unicode>8069</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH PSILI AND OXIA AND YPOGEGRAMMENI</name>
+			<original>176</original>
+			<unicode>8068</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH VARIA AND YPOGEGRAMMENI</name>
+			<original>177</original>
+			<unicode>8114</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH DASIA AND VARIA AND YPOGEGRAMMENI</name>
+			<original>178</original>
+			<unicode>8067</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH PSILI AND VARIA AND YPOGEGRAMMENI</name>
+			<original>179</original>
+			<unicode>8066</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH PERISPOMENI AND YPOGEGRAMMENI</name>
+			<original>180</original>
+			<unicode>8119</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI</name>
+			<original>181</original>
+			<unicode>8071</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ALPHA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI</name>
+			<original>182</original>
+			<unicode>8070</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL RHO WITH PSILI</name>
+			<original>184</original>
+			<unicode>8164</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH DASIA</name>
+			<original>185</original>
+			<unicode>7969</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH PSILI</name>
+			<original>186</original>
+			<unicode>7968</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH TONOS</name>
+			<original>187</original>
+			<unicode>942</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH DASIA AND OXIA</name>
+			<original>188</original>
+			<unicode>7973</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH PSILI AND OXIA</name>
+			<original>189</original>
+			<unicode>7972</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH VARIA</name>
+			<original>190</original>
+			<unicode>8052</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH DASIA AND VARIA</name>
+			<original>191</original>
+			<unicode>7971</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH PSILI AND VARIA</name>
+			<original>192</original>
+			<unicode>7970</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH PERISPOMENI</name>
+			<original>193</original>
+			<unicode>8134</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH DASIA AND PERISPOMENI</name>
+			<original>194</original>
+			<unicode>7975</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH PSILI AND PERISPOMENI</name>
+			<original>195</original>
+			<unicode>7974</unicode>
+		</codepoint>
+		<codepoint>
+			<name>GREEK YPOGEGRAMMENI</name>
+			<original>195</original>
+			<unicode>890</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH DASIA AND YPOGEGRAMMENI</name>
+			<original>197</original>
+			<unicode>8081</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH PSILI AND YPOGEGRAMMENI</name>
+			<original>198</original>
+			<unicode>8080</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH OXIA AND YPOGEGRAMMENI</name>
+			<original>199</original>
+			<unicode>8132</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH DASIA AND OXIA AND YPOGEGRAMMENI</name>
+			<original>200</original>
+			<unicode>8085</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH PSILI AND OXIA AND YPOGEGRAMMENI</name>
+			<original>201</original>
+			<unicode>8084</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH VARIA AND YPOGEGRAMMENI</name>
+			<original>202</original>
+			<unicode>8130</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH DASIA AND VARIA AND YPOGEGRAMMENI</name>
+			<original>203</original>
+			<unicode>8083</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH PSILI AND VARIA AND YPOGEGRAMMENI</name>
+			<original>204</original>
+			<unicode>8082</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH PERISPOMENI AND YPOGEGRAMMENI</name>
+			<original>205</original>
+			<unicode>8135</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI</name>
+			<original>206</original>
+			<unicode>8087</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL ETA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI</name>
+			<original>207</original>
+			<unicode>8086</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMICRON WITH DASIA</name>
+			<original>208</original>
+			<unicode>8001</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMICRON WITH PSILI</name>
+			<original>209</original>
+			<unicode>8000</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMICRON WITH DASIA</name>
+			<original>210</original>
+			<unicode>8001</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMICRON WITH DASIA AND OXIA</name>
+			<original>211</original>
+			<unicode>8005</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMICRON WITH PSILI AND OXIA</name>
+			<original>212</original>
+			<unicode>8004</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMICRON WITH VARIA</name>
+			<original>213</original>
+			<unicode>8056</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMICRON WITH DASIA AND VARIA</name>
+			<original>214</original>
+			<unicode>8003</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMICRON WITH PSILI AND VARIA</name>
+			<original>215</original>
+			<unicode>8002</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH DASIA</name>
+			<original>216</original>
+			<unicode>8017</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH PSILI</name>
+			<original>217</original>
+			<unicode>8016</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH OXIA</name>
+			<original>218</original>
+			<unicode>8059</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH DASIA AND OXIA</name>
+			<original>219</original>
+			<unicode>8021</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH PSILI AND OXIA</name>
+			<original>220</original>
+			<unicode>8020</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH VARIA</name>
+			<original>221</original>
+			<unicode>8058</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH DASIA AND VARIA</name>
+			<original>222</original>
+			<unicode>8019</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH PSILI AND VARIA</name>
+			<original>223</original>
+			<unicode>8018</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH PERISPOMENI</name>
+			<original>224</original>
+			<unicode>8166</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH DASIA AND PERISPOMENI</name>
+			<original>225</original>
+			<unicode>8023</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH PSILI AND PERISPOMENI</name>
+			<original>226</original>
+			<unicode>8022</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH DIALYTIKA</name>
+			<original>227</original>
+			<unicode>971</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH DIALYTIKA AND OXIA</name>
+			<original>228</original>
+			<unicode>8163</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL UPSILON WITH DIALYTIKA AND VARIA</name>
+			<original>229</original>
+			<unicode>8162</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH DASIA</name>
+			<original>230</original>
+			<unicode>8033</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH PSILI</name>
+			<original>231</original>
+			<unicode>8032</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH OXIA</name>
+			<original>232</original>
+			<unicode>8061</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH DASIA AND OXIA</name>
+			<original>233</original>
+			<unicode>8037</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH PSILI AND OXIA</name>
+			<original>234</original>
+			<unicode>8036</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH VARIA</name>
+			<original>235</original>
+			<unicode>8060</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH DASIA AND VARIA</name>
+			<original>236</original>
+			<unicode>8035</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH PSILI AND VARIA</name>
+			<original>237</original>
+			<unicode>8034</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH PERISPOMENI</name>
+			<original>238</original>
+			<unicode>8182</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH DASIA AND PERISPOMENI</name>
+			<original>239</original>
+			<unicode>8039</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH PSILI AND PERISPOMENI</name>
+			<original>240</original>
+			<unicode>8038</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH DASIA AND YPOGEGRAMMENI</name>
+			<original>241</original>
+			<unicode>8097</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH PSILI AND YPOGEGRAMMENI</name>
+			<original>242</original>
+			<unicode>8096</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH OXIA AND YPOGEGRAMMENI</name>
+			<original>243</original>
+			<unicode>8180</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH DASIA AND OXIA AND YPOGEGRAMMENI</name>
+			<original>244</original>
+			<unicode>8101</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH PSILI AND OXIA AND YPOGEGRAMMENI</name>
+			<original>245</original>
+			<unicode>8100</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH VARIA AND YPOGEGRAMMENI</name>
+			<original>246</original>
+			<unicode>8178</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH DASIA AND VARIA AND YPOGEGRAMMENI</name>
+			<original>247</original>
+			<unicode>8099</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH PSILI AND VARIA AND YPOGEGRAMMENI</name>
+			<original>248</original>
+			<unicode>8098</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH PERISPOMENI AND YPOGEGRAMMENI</name>
+			<original>249</original>
+			<unicode>8183</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH DASIA AND PERISPOMENI AND YPOGEGRAMMENI</name>
+			<original>250</original>
+			<unicode>8103</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL OMEGA WITH PSILI AND PERISPOMENI AND YPOGEGRAMMENI</name>
+			<original>251</original>
+			<unicode>8102</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL EPSILON WITH PSILI AND OXIA</name>
+			<original>339</original>
+			<unicode>7956</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL EPSILON WITH OXIA</name>
+			<original>353</original>
+			<unicode>8051</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL EPSILON WITH PSILI AND VARIA</name>
+			<original>376</original>
+			<unicode>7954</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL EPSILON WITH DASIA</name>
+			<original>732</original>
+			<unicode>7953</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL EPSILON WITH DASIA AND OXIA</name>
+			<original>8250</original>
+			<unicode>7957</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL EPSILON WITH VARIA</name>
+			<original>8482</original>
+			<unicode>7952</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA WITH DASIA AND PERISPOMENI</name>
+			<original>338</original>
+			<unicode>7991</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA WITH PSILI AND VARIA</name>
+			<original>352</original>
+			<unicode>7986</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA WITH DASIA</name>
+			<original>402</original>
+			<unicode>7985</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA WITH VARIA</name>
+			<original>710</original>
+			<unicode>8054</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA WITH PSILI</name>
+			<original>8222</original>
+			<unicode>7984</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA WITH DASIA AND OXIA</name>
+			<original>8224</original>
+			<unicode>7989</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA WITH PSILI AND OXIA</name>
+			<original>8225</original>
+			<unicode>7988</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA WITH OXIA</name>
+			<original>8230</original>
+			<unicode>8055</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA WITH DASIA AND VARIA</name>
+			<original>8240</original>
+			<unicode>7987</unicode>
+		</codepoint>
+		<codepoint>
+			<name>SMALL IOTA WITH PERISPOMENI</name>
+			<original>8249</original>
+			<unicode>8150</unicode>
+		</codepoint>
+	</font>
+</fontconversion>

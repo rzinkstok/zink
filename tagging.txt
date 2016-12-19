@@ -1,0 +1,7 @@
+- Replace format-font-italic with character style Emphasis
+- Replace format-font-bold with character style Bold
+- Replace format-font-underline with character style Underline
+- Tag headings
+- Tag captions
+- Tag environments
+- Tag strange script languages
