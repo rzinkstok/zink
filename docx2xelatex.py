@@ -1,93 +1,92 @@
-import os
-import subprocess
 from docxFrame import *
 from UnicodeToLaTeXLibrary import *
 
-class ConversionConfiguration: # ConversionTracker?
+
+class ConversionConfiguration(object): # ConversionTracker?
     def __init__(self):
         self.style2heading = {
-            'Kop1':'chapter',
-            'Heading1':'chapter',
-            'Kop2':'section',
-            'Heading2':'section',
-            'Kop3':'subsection',
-            'Heading3':'subsection',
-            'Kop4':'subsubsection',
-            'Heading4':'subsubsection',
-            'Kop5':'paragraph',
-            'Heading5':'paragraph',
-            'Kop7':'subparagraph',
-            'Heading7':'subparagraph',
-            'Kop9':'sssssssSection',
-            'Heading9':'sssssssSection',
-            'ZinkHeading1':'chapter',
-            'ZinkHeading2':'section',
-            'ZinkHeading3':'subsection',
-            'ZinkHeading4':'subsubsection'
+            'Kop1': 'chapter',
+            'Heading1': 'chapter',
+            'Kop2': 'section',
+            'Heading2': 'section',
+            'Kop3': 'subsection',
+            'Heading3': 'subsection',
+            'Kop4': 'subsubsection',
+            'Heading4': 'subsubsection',
+            'Kop5': 'paragraph',
+            'Heading5': 'paragraph',
+            'Kop7': 'subparagraph',
+            'Heading7': 'subparagraph',
+            'Kop9': 'sssssssSection',
+            'Heading9': 'sssssssSection',
+            'ZinkHeading1': 'chapter',
+            'ZinkHeading2': 'section',
+            'ZinkHeading3': 'subsection',
+            'ZinkHeading4': 'subsubsection'
         }
         self.style2environment = {
-            'quotation':'quotation',
-            'quote':'quotation',
-            'quotation_original':'quotation_original',
-            'quotation_translation':'quotation_translation',
-            'chapterquotation':'chapterquotation',
-            'chapterquote':'chapterquotation',
-            'blocktext':'zinkquotation',
-            'zinkquotation':'zinkquotation',
-            'zinkdescription':'zinkdescription',
-            'zinkequation':'zinkequation',
-            'blockquote':'zinkquotation',
-            'elegant':'zinkelegant',
-            'sansserif':'zinksansserif',
+            'quotation': 'quotation',
+            'quote': 'quotation',
+            'quotation_original': 'quotation_original',
+            'quotation_translation': 'quotation_translation',
+            'chapterquotation': 'chapterquotation',
+            'chapterquote': 'chapterquotation',
+            'blocktext': 'zinkquotation',
+            'zinkquotation': 'zinkquotation',
+            'zinkdescription': 'zinkdescription',
+            'zinkequation': 'zinkequation',
+            'blockquote': 'zinkquotation',
+            'elegant': 'zinkelegant',
+            'sansserif': 'zinksansserif',
         }
         self.styleproperty2command = {
-            'b':'textbf',
-            'i':'textit',
-            'u':'ul',
-            'superscript':'textsuperscript',
-            'subscript':'textsubscript',
-            'nor':'mathrm',
-            'double-struck':'mathbb'
+            'b': 'textbf',
+            'i': 'textit',
+            'u': 'ul',
+            'superscript': 'textsuperscript',
+            'subscript': 'textsubscript',
+            'nor': 'mathrm',
+            'double-struck': 'mathbb'
         }
         self.floatnames = ['Figure', 'Figuur', 'Afbeelding', 'Tabel', 'Table', 'Note']
         self.captionstyles = {
-            'Caption':'caption',
-            'Bijschrift':'caption',
-            'Figurenote':'caption'
+            'Caption': 'caption',
+            'Bijschrift': 'caption',
+            'Figurenote': 'caption'
         }
-        self.tablecaptionstyles = {'TableCaption':'caption'}
+        self.tablecaptionstyles = {'TableCaption': 'caption'}
         self.tablenotestyles = ['Tablenote', 'Tablenote0']
-        self.mathfunctions = {	'sin':'\\sin',
-                                'cos':'\\cos',
-                                'arccos':'\\arccos',
-                                'csc':'\\csc',
-                                'exp':'\\exp',
-                                'min':'\\min',
-                                'sinh':'\\sinh',
-                                'arcsin':'\\arcsin',
-                                'cosh':'\\cosh',
-                                'ln':'\\ln',
-                                'arctan':'\\arctan',
-                                'cot':'\\cot',
-                                'lim':'\\lim',
-                                'log':'\\log',
-                                'sec':'\\sec',
-                                'tan':'\\tan',
-                                'arg':'\\arg',
-                                'coth':'\\coth',
-                                'dim':'\\dim',
-                                'max':'\\max',
-                                'sin':'\\sin',
-                                'tanh':'\\tanh'}
-        self.mathaccents = {773:"\\overline"}
+        self.mathfunctions = {	'sin': '\\sin',
+                                'cos': '\\cos',
+                                'arccos': '\\arccos',
+                                'csc': '\\csc',
+                                'exp': '\\exp',
+                                'min': '\\min',
+                                'sinh': '\\sinh',
+                                'arcsin': '\\arcsin',
+                                'cosh': '\\cosh',
+                                'ln': '\\ln',
+                                'arctan': '\\arctan',
+                                'cot': '\\cot',
+                                'lim': '\\lim',
+                                'log': '\\log',
+                                'sec': '\\sec',
+                                'tan': '\\tan',
+                                'arg': '\\arg',
+                                'coth': '\\coth',
+                                'dim': '\\dim',
+                                'max': '\\max',
+                                'sin': '\\sin',
+                                'tanh': '\\tanh'}
+        self.mathaccents = {773: "\\overline"}
         self.convertable_image_extensions = ['.gif']
         self.incompatible_image_extensions = ['.emf', '.xml']
 
         self.useDirectStyling = True
         self.useTableColors = True
 
-        self.supportedScriptLanguages = {'el-GR':'greek'}
-        self.supportedFonts = {'Greek':'greek', 'Symbol':None}
+        self.supportedScriptLanguages = {'el-GR': 'greek'}
+        self.supportedFonts = {'Greek': 'greek', 'Symbol': None}
 
         self.inHeading = False
         self.inMath = False
@@ -118,8 +117,6 @@ class ConversionConfiguration: # ConversionTracker?
         self.tablecaptions = {}
         self.sortedtablecaptionkeys = []
         self.currenttablecaptiontbl = None
-        #self.currenttablecaptionlabels = {}
-        #self.cancelcurrentcaption = False
 
         self.tablenotes = {}
         self.sortedtablenotekeys = []
@@ -164,11 +161,10 @@ class ConversionConfiguration: # ConversionTracker?
 
     def buildTableCaption(self):
         if self.currenttablecaptiontbl is not None:
-            tcaption = "" #"\caption{"
+            tcaption = ""
             for l in self.currentcaptionlabels.values():
                 tcaption += "\label{"+l+"}"
             tcaption += self.xelatexcode.getString()
-            #tcaption += "}"
             self.xelatexcode.reset()
 
             self.tablecaptions[self.currenttablecaptiontbl] = tcaption
@@ -198,12 +194,12 @@ class ConversionConfiguration: # ConversionTracker?
         self.colors.append(c)
 
 
-class XeLaTeXCode:
+class XeLaTeXCode(object):
     def __init__(self):
         self.reset()
 
     def reset(self):
-        self.data = {"Tables":"", "Frontmatter":""}
+        self.data = {"Tables": "", "Frontmatter": ""}
         self.chapters = ["Tables", "Frontmatter"]
         self.curchap = -1
         self.toString = False
@@ -257,7 +253,7 @@ class XeLaTeXCode:
         self.data[n]=""
         self.chapters.append(n)
 
-    def writeRootFile(self, basename, fnames):
+    def writeRootFile(self, fpath, fnames):
         root = ""
         root += "\\documentclass[10pt]{memoir}\n"
         root += "\\usepackage{zinkLood}\n"
@@ -272,31 +268,34 @@ class XeLaTeXCode:
 
         root += "\\end{document}\n"
 
-        rfn = basename+"_root.tex"
-        print("Writing root file {:s}".format(rfn))
-        fp = open(rfn, "w")
+        print("Writing root file {:s}".format(fpath))
+        fp = open(fpath, "w")
         fp.write(root)
         fp.close()
 
-    def toFile(self, basename):
+    def toFile(self, folder, basename):
         fnames = []
         for c in self.chapters:
             if c == "Tables" and self.data[c] == "":
                 continue
             fname = basename + "_" + c + ".tex"
             fnames.append(fname)
-            print("Writing {:s}".format(fname))
-            fp = open(fname, "w")
+            fpath = os.path.join(folder, fname)
+            fp = open(fpath, "w")
             fp.write(self.data[c])
             fp.close()
-        self.writeRootFile(basename, fnames)
+        self.writeRootFile(os.path.join(folder, basename + "_root.tex"), fnames)
 
 
-class docx2xelatex:
+class docx2xelatex(object):
     def __init__(self, docx):
         self.docx = docx
         self.docxfilename = self.docx.filename
         self.basefilename = os.path.splitext(self.docxfilename)[0]
+        self.folder = self.docx.folder
+        self.outputfolder = os.path.join(self.folder, self.basefilename)
+        if not os.path.exists(self.outputfolder):
+            os.makedirs(self.outputfolder)
 
         self.config = ConversionConfiguration()
         self.xelatexcode = self.config.xelatexcode
@@ -304,12 +303,12 @@ class docx2xelatex:
         print()
         print("Converting {:s} to xelatex".format(self.docxfilename))
         print("Base filename: {:s}".format(self.basefilename))
-        print("Path: {:s}".format(self.docx.path))
+        print("Folder: {:s}".format(self.docx.folder))
         print()
 
-        self.docx.documentxml.save(filename=os.path.join(self.docx.path, 'document_orig.xml'), pretty_print=True)
+        self.docx.documentxml.save(filename=os.path.join(self.outputfolder, 'document_orig.xml'), pretty_print=True)
         if self.docx.footnotesxml is not None:
-            self.docx.footnotesxml.save(filename=os.path.join(self.docx.path, 'footnotes_orig.xml'), pretty_print=True)
+            self.docx.footnotesxml.save(filename=os.path.join(self.outputfolder, 'footnotes_orig.xml'), pretty_print=True)
 
     def buildReferenceList(self):
         itexts = []
@@ -503,24 +502,32 @@ class docx2xelatex:
 
 
     def writeLaTeXFiles(self):
-        self.xelatexcode.toFile(self.basefilename)
+        self.xelatexcode.toFile(self.outputfolder, self.basefilename)
 
-class ParagraphProcessor:
-    def __init__(self, parentprocessor, p):
+
+# Processors
+
+class Processor(object):
+    def __init__(self, parentprocessor, node):
         self.parentprocessor = parentprocessor
         self.config = self.parentprocessor.config
-        self.p = p
+        self.node = node
         self.docx = self.parentprocessor.docx
         self.xelatexcode = self.parentprocessor.xelatexcode
         self.process()
 
+    def process(self):
+        pass
+
+
+class ParagraphProcessor(Processor):
     def startHeading(self):
-        h = self.config.style2heading[self.p.getStyle()]
+        h = self.config.style2heading[self.node.getStyle()]
         self.config.inHeading = True
         if h == 'chapter':
             self.config.newChapter()
             print()
-            print("New chapter: {:s}".format(self.p.getText()))
+            print("New chapter: {:s}".format(self.node.getText()))
             print()
         self.xelatexcode.addNL()
         self.xelatexcode.append('\\'+h+'{')
@@ -529,13 +536,13 @@ class ParagraphProcessor:
         self.xelatexcode.append('}')
         self.xelatexcode.addNL()
         self.config.inHeading = False
-        if self.p in self.config.bookmarks:
-            h = self.config.style2heading[self.p.getStyle()]
-            self.xelatexcode.append("\\label{"+h+":"+self.config.bookmarks[self.p]["name"]+"}")
+        if self.node in self.config.bookmarks:
+            h = self.config.style2heading[self.node.getStyle()]
+            self.xelatexcode.append("\\label{" + h + ":" + self.config.bookmarks[self.node]["name"] + "}")
             self.xelatexcode.addNL()
 
     def startList(self):
-        numId, iLvl = self.p.getNumbering()
+        numId, iLvl = self.node.getNumbering()
         listType = self.docx.getListType(numId, iLvl)
         self.xelatexcode.addNL()
         if listType == 'bullet':
@@ -551,7 +558,7 @@ class ParagraphProcessor:
             self.xelatexcode.append('\\begin{itemize}')
 
     def endList(self):
-        numId, iLvl = self.p.getNumbering()
+        numId, iLvl = self.node.getNumbering()
         listType = self.docx.getListType(numId, iLvl)
         self.xelatexcode.addNL()
         if listType == 'bullet':
@@ -563,44 +570,44 @@ class ParagraphProcessor:
         self.xelatexcode.addNL()
 
     def startListItem(self):
-        if self.p.isFirstListItem():
+        if self.node.isFirstListItem():
             self.startList()
         self.xelatexcode.addNL()
         self.xelatexcode.append('\\item ')
 
     def endListItem(self):
-        if self.p.isLastListItem():
+        if self.node.isLastListItem():
             self.endList()
 
     def startEnvironmentIfNeeded(self):
-        if self.p.isFirstWithEnvironment():
-            self.xelatexcode.append("\\begin{" + self.p.getEnvironment(self.config.style2environment) + "}")
+        if self.node.isFirstWithEnvironment():
+            self.xelatexcode.append("\\begin{" + self.node.getEnvironment(self.config.style2environment) + "}")
 
     def endEnvironmentIfNeeded(self):
-        if self.p.isLastWithEnvironment():
-            self.xelatexcode.append("\\end{" + self.p.getEnvironment(self.config.style2environment) + "}")
+        if self.node.isLastWithEnvironment():
+            self.xelatexcode.append("\\end{" + self.node.getEnvironment(self.config.style2environment) + "}")
 
     def process(self):
         # Check heading, list, caption, footnote
-        if self.p.isHeading(self.config.style2heading):
-            if self.p.hasText():
+        if self.node.isHeading(self.config.style2heading):
+            if self.node.hasText():
                 self.startHeading()
-        elif self.p.isListItem():
+        elif self.node.isListItem():
             self.startListItem()
-        elif not self.config.inCaption and self.p.isCaption(self.config.captionstyles):
-            if self.p in self.config.captions.keys():
-                self.config.xelatexcode.append(self.config.captions[self.p])
+        elif not self.config.inCaption and self.node.isCaption(self.config.captionstyles):
+            if self.node in self.config.captions.keys():
+                self.config.xelatexcode.append(self.config.captions[self.node])
                 self.xelatexcode.addNL()
-                del(self.config.captions[self.p])
+                del(self.config.captions[self.node])
             return
-        elif not self.config.inCaption and self.p.isCaption(self.config.tablecaptionstyles):
+        elif not self.config.inCaption and self.node.isCaption(self.config.tablecaptionstyles):
             return
 
-        if self.p.isEnvironment(self.config.style2environment):
+        if self.node.isEnvironment(self.config.style2environment):
             self.startEnvironmentIfNeeded()
 
-        if len(self.p) > 0:
-            node = self.p[0]
+        if len(self.node) > 0:
+            node = self.node[0]
             while node is not None:
                 if node.tag == W+'r':
                     RunProcessor(self, node)
@@ -622,63 +629,55 @@ class ParagraphProcessor:
                     print("!! Paragraph subnode {:s} ignored".format(node.tag))
                 node = node.getnext()
 
-        if self.p.isEnvironment(self.config.style2environment):
+        if self.node.isEnvironment(self.config.style2environment):
             self.endEnvironmentIfNeeded()
 
-        if self.p.isHeading(self.config.style2heading):
-            if self.p.hasText():
+        if self.node.isHeading(self.config.style2heading):
+            if self.node.hasText():
                 self.endHeading()
-        elif self.p.isListItem():
+        elif self.node.isListItem():
             self.endListItem()
 
         if not self.config.inFootnote and not self.config.inTable and not self.config.inCaption and not self.config.inTableNote:
             self.xelatexcode.addNL()
             self.xelatexcode.addNL()
 
-class RunProcessor:
-    def __init__(self, parentprocessor, r):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.r = r
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
 
+class RunProcessor(Processor):
     def startStyleIfNeeded(self, s):
-        if self.r.isFirstWithStyleProperty(s):
+        if self.node.isFirstWithStyleProperty(s):
             self.xelatexcode.append('\\' + self.config.styleproperty2command[s] + '{')
 
     def endStyleIfNeeded(self, s):
-        if self.r.isLastWithStyleProperty(s):
+        if self.node.isLastWithStyleProperty(s):
             self.xelatexcode.append('}')
 
     def startStyles(self):
-        if self.r.isBold(self.config.useDirectStyling):
+        if self.node.isBold(self.config.useDirectStyling):
             self.startStyleIfNeeded('b')
-        if self.r.isItalic(self.config.useDirectStyling):
+        if self.node.isItalic(self.config.useDirectStyling):
             self.startStyleIfNeeded('i')
-        if self.r.isUnderline(self.config.useDirectStyling):
+        if self.node.isUnderline(self.config.useDirectStyling):
             self.startStyleIfNeeded('u')
-        if self.r.isSuperScript():
+        if self.node.isSuperScript():
             self.startStyleIfNeeded('superscript')
-        if self.r.isSubScript():
+        if self.node.isSubScript():
             self.startStyleIfNeeded('subscript')
-        #print("\n!! Run properties subnode {:s} ignored\n".format(node.tag))
 
     def endStyles(self):
-        if self.r.isBold(self.config.useDirectStyling):
+        if self.node.isBold(self.config.useDirectStyling):
             self.endStyleIfNeeded('b')
-        if self.r.isItalic(self.config.useDirectStyling):
+        if self.node.isItalic(self.config.useDirectStyling):
             self.endStyleIfNeeded('i')
-        if self.r.isUnderline(self.config.useDirectStyling):
+        if self.node.isUnderline(self.config.useDirectStyling):
             self.endStyleIfNeeded('u')
-        if self.r.isSuperScript():
+        if self.node.isSuperScript():
             self.endStyleIfNeeded('superscript')
-        if self.r.isSubScript():
+        if self.node.isSubScript():
             self.endStyleIfNeeded('subscript')
 
     def processLanguage(self):
-        language = self.r.getLanguage()
+        language = self.node.getLanguage()
         if (language is not None) and (language in self.config.supportedScriptLanguages.keys()) and (not self.config.inStrangeScript):
             self.startStrangeScript(language)
         if (language is None or language not in self.config.supportedScriptLanguages.keys()) and self.config.inStrangeScript:
@@ -693,7 +692,7 @@ class RunProcessor:
         self.config.inStrangeScript = False
 
     def processFont(self):
-        font = self.r.getFont()
+        font = self.node.getFont()
         if font is not None and font in self.config.supportedFonts.keys() and not self.config.inFont:
             self.startFont(font)
         if (font is None or font not in self.config.supportedFonts.keys()) and self.config.inFont:
@@ -714,8 +713,8 @@ class RunProcessor:
         self.processFont()
         self.startStyles()
 
-        if len(self.r) > 0:
-            node = self.r[0]
+        if len(self.node) > 0:
+            node = self.node[0]
             while node is not None:
                 if node.tag == W+'t':
                     TextProcessor(self, node)
@@ -754,19 +753,13 @@ class RunProcessor:
 
         self.endStyles()
 
-class TextProcessor:
-    def __init__(self, parentprocessor, t):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.t = t
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
 
+class TextProcessor(Processor):
     def process(self):
-        LaTeXizer(self, self.t.getText())
+        LaTeXizer(self, self.node.getText())
 
-class LaTeXizer:
+
+class LaTeXizer(object):
     def __init__(self, parentprocessor, s, isString=False):
         self.parentprocessor = parentprocessor
         self.config = self.parentprocessor.config
@@ -832,15 +825,8 @@ class LaTeXizer:
             mc = self.config.unicodelib.getLaTeXMathChar(c)
         return mc
 
-class SymProcessor:
-    def __init__(self, parentprocessor, s):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.s = s
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
 
+class SymProcessor(Processor):
     def process(self):
         c = chr(self.s.getSymbolCode())
         f = self.s.getSymbolFont()
@@ -851,17 +837,9 @@ class SymProcessor:
         self.xelatexcode.append(s)
 
 
-class FootnoteProcessor:
-    def __init__(self, parentprocessor, f):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.f = f
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
-
+class FootnoteProcessor(Processor):
     def process(self):
-        fid = self.f.getFootnoteId()
+        fid = self.node.getFootnoteId()
         footnote = self.docx.footnotesxml.getFootnote(fid)
 
         self.config.inFootnote = True
@@ -884,15 +862,8 @@ class FootnoteProcessor:
         self.xelatexcode.append('}')
         self.config.inFootnote = False
 
-class TableProcessor:
-    def __init__(self, parentprocessor, t):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.t = t
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
 
+class TableProcessor(Processor):
     def arabicToAlphabetic(self, a):
         b = 0
         while a>26:
@@ -906,14 +877,14 @@ class TableProcessor:
         return firstletter + chr(ord("@")+a)
 
     def process(self):
-        suppressTable = not self.t.hasText('()0123456789', ['Caption', 'Figurenote', 'Tablenote', 'Tablenote0'])
+        suppressTable = not self.node.hasText('()0123456789', ['Caption', 'Figurenote', 'Tablenote', 'Tablenote0'])
 
         self.config.startTable(suppressTable)
 
         if not suppressTable:
             tableid = "tabc"+self.arabicToAlphabetic(self.config.currentChapter)+"t"+self.arabicToAlphabetic(self.config.currentTable) # ord("@") = ord("A") - 1
-            if self.t in self.config.tablenotes:
-                tablenotes = self.config.tablenotes[self.t]
+            if self.node in self.config.tablenotes:
+                tablenotes = self.config.tablenotes[self.node]
             else:
                 tablenotes = []
             self.xelatexcode.append("%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%")
@@ -925,7 +896,7 @@ class TableProcessor:
             self.xelatexcode.append("\\newcommand{\\"+tableid+"}{%")
             self.xelatexcode.addNL()
 
-            tw = self.t.getWidth()
+            tw = self.node.getWidth()
             if tw is None or tw == 'auto':
                 tablewidth = "1.0\\textwidth"
             elif tw[-1] == '%':
@@ -944,9 +915,9 @@ class TableProcessor:
                 self.xelatexcode.append("\tdoinside=\\tablefont\\tiny,%")
                 self.xelatexcode.addNL()
                 self.xelatexcode.append("\tcaption={")
-                if self.t in self.config.tablecaptions:
-                    self.xelatexcode.append(self.config.tablecaptions[self.t])
-                    del(self.config.tablecaptions[self.t])
+                if self.node in self.config.tablecaptions:
+                    self.xelatexcode.append(self.config.tablecaptions[self.node])
+                    del(self.config.tablecaptions[self.node])
                 self.xelatexcode.append("}%")
                 self.xelatexcode.addNL()
                 self.xelatexcode.append("]%")
@@ -954,8 +925,8 @@ class TableProcessor:
                 self.xelatexcode.append("{%")
                 self.xelatexcode.addNL()
 
-            ncols = self.t.getNumberOfLogicalColumns()
-            nrows = self.t.getNumberOfRows()
+            ncols = self.node.getNumberOfLogicalColumns()
+            nrows = self.node.getNumberOfRows()
 
             for i in range(ncols):
                 self.xelatexcode.append("\t>{\\raggedright\\arraybackslash}X%")
@@ -979,7 +950,7 @@ class TableProcessor:
 
 
         # Table body
-        rows = self.t.getRows()
+        rows = self.node.getRows()
         rowcounter = 0
         for r in rows:
             # check for gridBefore
@@ -1062,15 +1033,7 @@ class TableProcessor:
             self.xelatexcode.addNL()
 
 
-class MathParagraphProcessor:
-    def __init__(self, parentprocessor, mp):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.mp = mp
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
-
+class MathParagraphProcessor(Processor):
     def process(self):
         self.config.inMathEnvironment = True
 
@@ -1079,11 +1042,11 @@ class MathParagraphProcessor:
         self.xelatexcode.append("\\begin{equation}")
         self.xelatexcode.addNL()
 
-        if self.mp in self.config.bookmarks:
-            self.xelatexcode.append("\\label{equation:"+self.config.bookmarks[self.mp]["name"]+"}")
+        if self.node in self.config.bookmarks:
+            self.xelatexcode.append("\\label{equation:" + self.config.bookmarks[self.node]["name"] + "}")
             self.xelatexcode.addNL()
 
-        node = self.mp[0]
+        node = self.node[0]
         while node is not None:
             if node.tag == M + 'oMathParaPr':
                 # Process properties (only justification)
@@ -1100,20 +1063,13 @@ class MathParagraphProcessor:
 
         self.config.inMathEnvironment = False
 
-class MathProcessor:
-    def __init__(self, parentprocessor, m):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.m = m
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
 
+class MathProcessor(Processor):
     def process(self):
         if not self.config.inMathEnvironment:
             self.config.inMath = True
 
-        mlc = self.processMathElement(self.m)
+        mlc = self.processMathElement(self.node)
 
         if not self.config.inMathEnvironment:
             self.config.inMath = False
@@ -1292,7 +1248,7 @@ class MathProcessor:
         else:
             raise ValueError("Math accent character {:d} missing".format(ord(chr)))
 
-class MathRunProcessor:
+class MathRunProcessor(Processor):
     def __init__(self, parentprocessor, r):
         self.parentprocessor = parentprocessor
         self.config = self.parentprocessor.config
@@ -1322,26 +1278,27 @@ class MathRunProcessor:
         self.endStyles()
 
     def startStyles(self):
-        if self.r.isRoman():
+        if self.node.isRoman():
             self.startStyleIfNeeded('nor')
-        if self.r.isDoubleStruck():
+        if self.node.isDoubleStruck():
             self.startStyleIfNeeded('double-struck')
 
     def startStyleIfNeeded(self, s):
-        if self.r.isFirstWithStyleProperty(s):
+        if self.node.isFirstWithStyleProperty(s):
             self.xelatexstring += "\\" + self.config.styleproperty2command[s] + "{"
 
     def endStyles(self):
-        if self.r.isRoman():
+        if self.node.isRoman():
             self.endStyleIfNeeded('nor')
-        if self.r.isDoubleStruck():
+        if self.node.isDoubleStruck():
             self.endStyleIfNeeded('double-struck')
 
     def endStyleIfNeeded(self, s):
-        if self.r.isLastWithStyleProperty(s):
+        if self.node.isLastWithStyleProperty(s):
             self.xelatexstring += "}"
 
-class MathTextProcessor:
+
+class MathTextProcessor(Processor):
     def __init__(self, parentprocessor, t):
         self.parentprocessor = parentprocessor
         self.config = self.parentprocessor.config
@@ -1356,20 +1313,13 @@ class MathTextProcessor:
         l = LaTeXizer(self, self.t.getText(), isString=True)
         self.xelatexstring += l.getXeLaTeXString()
 
-class DrawingProcessor:
-    def __init__(self, parentprocessor, d):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.d = d
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
 
+class DrawingProcessor(Processor):
     def process(self):
         commented = False
         latexname = None
 
-        refID = self.d.getImageReferenceId()
+        refID = self.node.getImageReferenceId()
         if refID is None:
             print("Skipping drawing (no reference ID found)")
             self.xelatexcode.addNL()
@@ -1377,7 +1327,7 @@ class DrawingProcessor:
             self.xelatexcode.addNL()
             #return
         else:
-            sx, sy = self.d.getImageSize()
+            sx, sy = self.node.getImageSize()
 
             relxml = self.docx.getRelationsXML()
             zippath = os.path.join('word', relxml.resolveRelation(refID))
@@ -1404,7 +1354,6 @@ class DrawingProcessor:
                 subprocess.Popen(["/usr/bin/sips",  "-s",  "format",  "pdf", newname, "--out", pdfpath])
                 latexname = os.path.join(mediadirname, pdffilename)
 
-
         self.xelatexcode.addNL()
         if commented:
             self.xelatexcode.append("%")
@@ -1421,12 +1370,12 @@ class DrawingProcessor:
         self.xelatexcode.addNL()
 
         ### Caption
-        if self.d in self.config.captions:
+        if self.node in self.config.captions:
             self.xelatexcode.append("\\caption{")
-            self.xelatexcode.append(self.config.captions[self.d])
+            self.xelatexcode.append(self.config.captions[self.node])
             self.xelatexcode.append("}")
             self.xelatexcode.addNL()
-            del(self.config.captions[self.d])
+            del(self.config.captions[self.node])
 
         if commented:
             self.xelatexcode.append("%")
@@ -1435,22 +1384,15 @@ class DrawingProcessor:
         self.xelatexcode.append("}")
         self.xelatexcode.addNL()
 
-class BookmarkProcessor:
-    def __init__(self, parentprocessor, b):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.b = b
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
 
+class BookmarkProcessor(Processor):
     def process(self):
-        bid = self.b.getBookmarkId()
-        bname = self.b.getBookmarkName()
+        bid = self.node.getBookmarkId()
+        bname = self.node.getBookmarkName()
         if bname in self.config.references:
             print("=========================")
             print("Bookmark id: "+bid+"; name: "+bname)
-            btype, blink = self.b.getBookmarkType(self.config.style2heading.keys(), self.config.floatnames, self.config.captionstyles.keys())
+            btype, blink = self.node.getBookmarkType(self.config.style2heading.keys(), self.config.floatnames, self.config.captionstyles.keys())
             if btype == 'Equation':
                 eq = self.selectEquation(blink)
                 if eq is not None:
@@ -1524,29 +1466,22 @@ class BookmarkProcessor:
                 goToNext = True
         return (prevEq, nextEq)
 
-class FieldCharProcessor:
-    def __init__(self, parentprocessor, fc):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.fc = fc
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
 
+class FieldCharProcessor(Processor):
     def process(self):
-        if self.fc.isEnd():
+        if self.node.isEnd():
             self.config.suppressFieldContents = False
             return
-        elif self.fc.isSeparate():
+        elif self.node.isSeparate():
             return
 
-        fieldcodes = self.fc.getInstructionText().split()
+        fieldcodes = self.node.getInstructionText().split()
 
         if fieldcodes[0] == 'NOTEREF' or fieldcodes[0] == 'REF':
             refname = fieldcodes[1]
             if refname in self.config.labels:
                 self.config.suppressFieldContents = True
-                rtext = self.fc.getResultText().split()
+                rtext = self.node.getResultText().split()
                 for rt in rtext:
                     if rt in self.config.floatnames:
                         self.xelatexcode.append(rt+"~")
@@ -1570,23 +1505,15 @@ class FieldCharProcessor:
             print("!! Complex field code ignored: "+" ".join(fieldcodes))
 
 
-class FieldSimpleProcessor:
-    def __init__(self, parentprocessor, fs):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.fs = fs
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
-
+class FieldSimpleProcessor(Processor):
     def process(self):
-        fieldcodes = self.fs.getInstructionText().split()
+        fieldcodes = self.node.getInstructionText().split()
 
         if fieldcodes[0] == 'NOTEREF' or fieldcodes[0] == 'REF':
             refname = fieldcodes[1]
             if refname in self.config.labels:
                 ### XXX Quick & Dirty !!!
-                rtext = self.fs.getContainedText().split()
+                rtext = self.node.getContainedText().split()
                 for rt in rtext:
                     if rt in self.config.floatnames:
                         self.xelatexcode.append(rt+"~")
@@ -1603,18 +1530,11 @@ class FieldSimpleProcessor:
         elif fieldcodes[0] == 'ADDIN' and fieldcodes[1] == 'REFMGR.CITE':
             pass
 
-class SubProcessor:
-    def __init__(self, parentprocessor, n):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.n = n
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
 
+class SubProcessor(Processor):
     def process(self):
-        if len(self.n) > 0:
-            node = self.n[0]
+        if len(self.node) > 0:
+            node = self.node[0]
             while node is not None:
                 if node.tag == W+'r':
                     RunProcessor(self, node)
@@ -1664,36 +1584,32 @@ class SubProcessor:
                     print("!! SmartTag subnode {:s} ignored".format(node.tag))
                 node = node.getnext()
 
-class CaptionProcessor:
-    def __init__(self, parentprocessor, cp, openbookmarks, lastdrawing=None):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.cp = cp
+
+class CaptionProcessor(Processor):
+    def __init__(self, parentprocessor, node, openbookmarks, lastdrawing=None):
         self.lastdrawing = lastdrawing
         self.openbookmarks = openbookmarks
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
+        Processor.__init__(self, parentprocessor, node)
 
     def process(self):
         self.config.inCaption = True
 
-        if self.cp.isFirstWithStyle():
+        if self.node.isFirstWithStyle():
             self.config.buildCaption()
             if self.lastdrawing is None:
-                self.config.currentcaptionp = self.cp
+                self.config.currentcaptionp = self.node
             else:
                 self.config.currentcaptionp = self.lastdrawing
             self.config.xelatexcode.startToString()
 
         self.processBookmarks()
-        ParagraphProcessor(self, self.cp)
+        ParagraphProcessor(self, self.node)
 
         self.config.inCaption = False
 
     def processBookmarks(self):
         allbookmarks = {}
-        for b in self.cp.findAll('bookmarkStart'):
+        for b in self.node.findAll('bookmarkStart'):
             allbookmarks[b.getBookmarkId()] = b
         allbookmarks.update(self.openbookmarks)
 
@@ -1704,32 +1620,28 @@ class CaptionProcessor:
             if btype == 'Caption' and bid not in self.config.currentcaptionlabels.keys():
                 self.config.currentcaptionlabels[bid] = "float:"+bname
 
-class TableCaptionProcessor:
-    def __init__(self, parentprocessor, tcp, openbookmarks):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.tcp = tcp
+
+class TableCaptionProcessor(Processor):
+    def __init__(self, parentprocessor, node, openbookmarks):
         self.openbookmarks = openbookmarks
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
+        Processor.__init__(self, parentprocessor, node)
 
     def process(self):
         self.config.inCaption = True
 
-        if self.tcp.isFirstWithStyle():
+        if self.node.isFirstWithStyle():
             self.config.buildTableCaption()
             self.config.currenttablecaptiontbl = self.findNextTable()
             self.config.xelatexcode.startToString()
 
         self.processBookmarks()
-        ParagraphProcessor(self, self.tcp)
+        ParagraphProcessor(self, self.node)
 
         self.config.inCaption = False
 
     def processBookmarks(self):
         allbookmarks = {}
-        for b in self.tcp.findAll('bookmarkStart'):
+        for b in self.node.findAll('bookmarkStart'):
             allbookmarks[b.getBookmarkId()] = b
         allbookmarks.update(self.openbookmarks)
 
@@ -1743,50 +1655,41 @@ class TableCaptionProcessor:
                 self.config.currentcaptionlabels[bid] = "float:"+bname
 
     def findNextTable(self):
-        nextn = self.tcp.getnext()
+        nextn = self.node.getnext()
         if nextn.tag == W+'tbl':
             return nextn
         else:
             raise ValueError("Table note's next node is not a table!")
 
-class TableNoteProcessor:
-    def __init__(self, parentprocessor, tn, lasttable):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.tn = tn
+
+class TableNoteProcessor(Processor):
+    def __init__(self, parentprocessor, node, lasttable):
         self.lasttable = lasttable
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
         print("Processing table note")
         print(self.lasttable)
-        self.process()
+        Processor.__init__(self, parentprocessor, node)
 
     def process(self):
         self.config.inTableNote = True
 
-        if self.tn.isFirstWithStyle():
+        if self.node.isFirstWithStyle():
             self.config.buildTableNote()
             self.config.currenttablenotetbl = self.lasttable
             self.config.xelatexcode.startToString()
 
-        ParagraphProcessor(self, self.tn)
+        ParagraphProcessor(self, self.node)
 
         self.config.inTableNote = False
 
 
-class AlternateContentProcessor:
-    def __init__(self, parentprocessor, ac):
-        self.parentprocessor = parentprocessor
-        self.config = self.parentprocessor.config
-        self.ac = ac
+class AlternateContentProcessor(Processor):
+    def __init__(self, parentprocessor, node):
         self.choices = []
-        self.docx = self.parentprocessor.docx
-        self.xelatexcode = self.parentprocessor.xelatexcode
-        self.process()
+        Processor.__init__(self, parentprocessor, node)
 
     def process(self):
-        if len(self.ac) > 0:
-            node = self.ac[0]
+        if len(self.node) > 0:
+            node = self.node[0]
             while node is not None:
                 if node.tag == MC+'Choice':
                     self.choices.append(node)

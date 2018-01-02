@@ -6,25 +6,32 @@ import os
 from lxml import etree as ET
 import docxBase
 
+
 class MarkupCompatibilityElement(docxBase.OfficeOpenXMLElement):
-	def _init(self):
-		self.nsprefix = 'mc'
-	
-	def get(self, key, default=None):
-		# The Markup Compatibility XML file does not use prefixes!
-		return ET.ElementBase.get(self, key, default)
+    def _init(self):
+        self.nsprefix = 'mc'
+
+    def get(self, key, default=None):
+        # The Markup Compatibility XML file does not use prefixes!
+        return ET.ElementBase.get(self, key, default)
+
 
 class AlternateContent(MarkupCompatibilityElement):
-	# The AlternateContent element contains the full set of all possible markup alternatives. Each possible
-	# alternative is contained within either a Choice or Fallback child element of the AlternateContent element.
-	pass
-	
+    """
+    The AlternateContent element contains the full set of all possible markup alternatives. Each possible
+    alternative is contained within either a Choice or Fallback child element of the AlternateContent element.
+    """
+    pass
+
+
 class Choice(MarkupCompatibilityElement):
-	def getDependency(self):
-		return self.get('Requires')
+    def getDependency(self):
+        return self.get('Requires')
+
 
 class Fallback(MarkupCompatibilityElement):
-	pass
+    pass
+
 
 MC_NS = "http://schemas.openxmlformats.org/markup-compatibility/2006"
 MC = "{%s}" % MC_NS

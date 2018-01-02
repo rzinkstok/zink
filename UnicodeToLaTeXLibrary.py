@@ -4,6 +4,7 @@ import os
 from lxml import etree as ET
 import unicodedata as ucd
 
+
 class UnicodeToLaTeXLibraryError(Exception):
     def __init__(self, codepoint):
         self.codepoint = codepoint
@@ -11,6 +12,7 @@ class UnicodeToLaTeXLibraryError(Exception):
     def __str__(self):
         s = "Unknown codepoint {:d}".format(self.codepoint)
         return s
+
 
 class FontEncodingConvertorError(Exception):
     def __init__(self, codepoint, font):
@@ -21,13 +23,14 @@ class FontEncodingConvertorError(Exception):
         s = "Unknown codepoint {:d} for font {:s}".format(self.codepoint, self.font)
         return s
 
+
 class UnicodeToLaTeXLibrary:
     def __init__(self, libfilename=None):
         self.latexchardict = {}
         self.xelatexchardict = {}
         self.latexmathchardict = {}
         if libfilename is None:
-            libfilename = '/Users/rzinkstok/Development/virtualenvs/ZINK/src/UnicodeToLaTeXLibrary.xml'
+            libfilename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "UnicodeToLaTeXLibrary.xml")
         self.libraryfilename = libfilename
         self.loadXMLToDict()
     
@@ -182,11 +185,10 @@ class UnicodeToLaTeXLibrary:
             raise UnicodeToLaTeXLibraryError(codepoint)
             
 
-
 class FontEncodingConvertor:
     def __init__(self, mapfilename=None):
         if mapfilename is None:
-            mapfilename = '/Users/rzinkstok/Development/virtualenvs/ZINK/src/FontEncodingMap.xml'
+            mapfilename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "FontEncodingMap.xml")
         self.mapfilename = mapfilename
         self.buildMap()
     

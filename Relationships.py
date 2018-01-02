@@ -1,30 +1,24 @@
 ###!/Library/Frameworks/Python.framework/Versions/3.1/bin/python
 
-import sys
-import os
-import shutil
-import subprocess
-import zipfile
-import codecs
-import unittest
 from lxml import etree as ET
 import docxBase
 
 
 class PackageRelationshipsElement(docxBase.OfficeOpenXMLElement):
-	def _init(self):
-		self.nsprefix = 'rel'
-		
-	def get(self, key, default=None):
-		# The Relationships XML file does not use prefixes!
-		return ET.ElementBase.get(self, key, default)
-			
-class Relationships(PackageRelationshipsElement):
-	pass
-	
-class Relationship(PackageRelationshipsElement):
-	pass
+    def _init(self):
+        self.nsprefix = 'rel'
 
+    def get(self, key, default=None):
+        # The Relationships XML file does not use prefixes!
+        return ET.ElementBase.get(self, key, default)
+
+
+class Relationships(PackageRelationshipsElement):
+    pass
+
+
+class Relationship(PackageRelationshipsElement):
+    pass
 
 
 REL_NS = "http://schemas.openxmlformats.org/package/2006/relationships"

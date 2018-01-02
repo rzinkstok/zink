@@ -12,46 +12,54 @@ import docxBase
 
 
 class DrawingMLElement(docxBase.OfficeOpenXMLElement):
-	def _init(self):
-		self.nsprefix = 'a'
+    def _init(self):
+        self.nsprefix = 'a'
 
 class DrawingElement(docxBase.OfficeOpenXMLElement):
-	def _init(self):
-		self.nsprefix = 'a14'
-		
+    def _init(self):
+        self.nsprefix = 'a14'
+
 class blip(DrawingMLElement):
-	# This element specifies the existence of an image (binary large image or picture) and contains a reference to the
-	# image data.
-	#
-	# Parent elements: blipFill, buBlip
-	#
-	# Child elements: alphaBiLevel, alphaCeiling, alphaFloor, alphaInv, alphaMod, alphaModFix, alphaRepl,
-	# biLevel, blur, clrChange, clrRepl, duotone, extLst, fillOverlay, grayscl, hsl, lum, tint
-	pass
-	
+    """
+    This element specifies the existence of an image (binary large image or picture) and contains a reference to the
+    image data.
+
+    Parent elements: blipFill, buBlip
+    Child elements: alphaBiLevel, alphaCeiling, alphaFloor, alphaInv, alphaMod, alphaModFix, alphaRepl,
+                    biLevel, blur, clrChange, clrRepl, duotone, extLst, fillOverlay, grayscl, hsl, lum, tint
+    """
+    pass
+
+
 class DrawingMLWordprocessingDrawingElement(docxBase.OfficeOpenXMLElement):
-	def _init(self):
-		self.nsprefix = 'wp'
-		
+    def _init(self):
+        self.nsprefix = 'wp'
+
+
 class extent(DrawingMLWordprocessingDrawingElement):
-	# This element specifies the extents of the parent DrawingML object within the document 
-	# (i.e. its final height and width).
-	#
-	# Parent elements: anchor, inline
-	#
-	# Child elements: cx, cy
-	pass
+    """
+    This element specifies the extents of the parent DrawingML object within the document
+    (i.e. its final height and width).
+
+    Parent elements: anchor, inline
+
+    Child elements: cx, cy
+    """
+    pass
+
 
 class DrawingMLPictureElement(docxBase.OfficeOpenXMLElement):
-	def _init(self):
-		self.nsprefix = 'pic'
+    def _init(self):
+        self.nsprefix = 'pic'
+
 
 class chart(docxBase.OfficeOpenXMLElement):
-	def _init(self):
-		self.nsprefix = 'c'
-		
-	def getRelationId(self):
-		return self.get('r:id')
+    def _init(self):
+        self.nsprefix = 'c'
+
+    def getRelationId(self):
+        return self.get('r:id')
+
 
 A_NS = 'http://schemas.openxmlformats.org/drawingml/2006/main'
 A = "{%s}" % A_NS

@@ -1,6 +1,5 @@
 ###!/Library/Frameworks/Python.framework/Versions/3.1/bin/python
 
-import sys
 from docxBase import *
 import WordprocessingML
 import DrawingML

@@ -12,10 +12,12 @@ import docxBase
 
 
 ### WordprocessingML base element class		
+
 class WordprocessingMLElement(docxBase.OfficeOpenXMLElement):
     #NAMESPACE = W_NS
     def _init(self):
         self.nsprefix = 'w'
+
 
 ### WordprocessingML element classes
 
@@ -366,6 +368,7 @@ class p(WordprocessingMLElement):
             return False
         return True
 
+
 class r(WordprocessingMLElement):
     # This element specifies a run of content in the parent field, hyperlink, custom XML element, structured document tag,
     # smart tag, or paragraph. The contents of a run in a WordprocessingML document shall consist of any combination of run content.
@@ -557,6 +560,7 @@ class r(WordprocessingMLElement):
         else:
             return True
 
+
 class t(WordprocessingMLElement):
     # This element specifies that this run contains literal text which shall be displayed in the document.
     # The t element shall be used for all text runs which is not: Part of a region of text that is contained
@@ -575,23 +579,24 @@ class t(WordprocessingMLElement):
     def ensurePreserveSpace(self):
         # Check for the existence of the space='preserve' attribute
         if 'space' in self.attrib:
-            if self.attrib[XML+'space'] == 'preserve':
+            if self.attrib[W+'space'] == 'preserve':
                 return
             else:
-                self.attrib[XML+'space'] = 'preserve'
+                self.attrib[W+'space'] = 'preserve'
         else:
-            self.set(XML+'space', 'preserve')
+            self.set(W+'space', 'preserve')
 
     def ensureNoPreserveSpace(self):
         # remove the space attribute if present
         if 'space' in self.attrib:
-            del self.attrib['space']
+            del self.attrib[W+'space']
 
     def getText(self):
         return self.text
 
 
 ### Footnote element classes
+
 
 class footnotes(WordprocessingMLElement):
     # This element specifies the set of all footnotes in the document, including footnote separators and
@@ -602,6 +607,7 @@ class footnotes(WordprocessingMLElement):
     # Child elements: footnote
     #TAG = 'footnotes'
     pass
+
 
 class footnote(WordprocessingMLElement):
     # This element specifies the content of a single footnote within a WordprocessingML document. Each footnote
@@ -620,6 +626,7 @@ class footnote(WordprocessingMLElement):
         ps = self.findAll('p')
         return ps
 
+
 class footnoteReference(WordprocessingMLElement):
     # This element specifies the presence of a footnote reference. A footnote reference is a run of automatically
     # numbered text which references a particular footnote within the parent document, and inherits the footnote
@@ -633,6 +640,7 @@ class footnoteReference(WordprocessingMLElement):
     def getFootnoteId(self):
         return self.get('id')
 
+
 class footnoteRef(WordprocessingMLElement):
     # This element specifies the presence of a footnote reference mark. A footnote reference mark is a run of
     # automatically numbered text which follows the numbering format set forth via the footnote numFmt element.
@@ -642,6 +650,7 @@ class footnoteRef(WordprocessingMLElement):
     # Parent element: r
     #TAG = 'footnoteRef'
     pass
+
 
 class separator(WordprocessingMLElement):
     # This element specifies the presence of a separator mark within the current run. A separator mark is a horizontal
@@ -654,6 +663,7 @@ class separator(WordprocessingMLElement):
     #TAG = 'separator'
     pass
 
+
 class continuationSeparator(WordprocessingMLElement):
     # This element specifies the presence of a continuation separator mark within the current run. A continuation
     # separator mark is a horizontal line which spans the width of the main story's text extents.
@@ -664,6 +674,7 @@ class continuationSeparator(WordprocessingMLElement):
     # Parent element: r
     #TAG = 'continuationSeparator'
     pass
+
 
 class footnotePr(WordprocessingMLElement):
     # This element specifies the footnote properties for this document or for the current section. Each property is stored as a unique element
@@ -676,6 +687,7 @@ class footnotePr(WordprocessingMLElement):
     # Child elements: footnote, numFmt, numRestart, numStart, pos
     #TAG = 'footnotePr'
     pass
+
 
 class numRestart(WordprocessingMLElement):
     # This element specifies when all automatic numbering for the footnote or endnote reference marks shall be
@@ -698,6 +710,7 @@ class numRestart(WordprocessingMLElement):
 
 ### Run property classes
 
+
 class i(WordprocessingMLElement):
     # This element specifies whether the italic property should be applied to all non-complex script characters in the
     # contents of this run when displayed in a document.
@@ -714,6 +727,7 @@ class i(WordprocessingMLElement):
     # Parent element: rPr
     #TAG = 'i'
     pass
+
 
 class b(WordprocessingMLElement):
     # This element specifies whether the bold property shall be applied to all non-complex script characters
@@ -732,6 +746,7 @@ class b(WordprocessingMLElement):
     #TAG = 'b'
     pass
 
+
 class u(WordprocessingMLElement):
     # This element specifies that the contents of this run should be displayed along with an underline appearing
     # directly below the character height (less all spacing above and below the characters on the line).
@@ -743,6 +758,7 @@ class u(WordprocessingMLElement):
     #TAG = 'u'
     patterns = ('single', 'words', 'double', 'thick', 'dotted', 'dottedHeavy', 'dash', 'dashedHeavy', 'dashLong', 'dashLongHeavy', 'dotDash', 'dashDotHeavy', 'dotDotDash', 'dashDotDotHeavy', 'wave', 'wavyHeavy', 'wavyDouble', 'none')
 
+
 class iCs(WordprocessingMLElement):
     # This element specifies whether the italic property should be applied to all complex script characters in the
     # contents of this run when displayed in a document.
@@ -751,6 +767,7 @@ class iCs(WordprocessingMLElement):
     #TAG = 'iCs'
     pass
 
+
 class bCs(WordprocessingMLElement):
     # This element specifies whether the bold property shall be applied to all complex script characters in the contents
     # of this run when displayed in a document.
@@ -758,6 +775,7 @@ class bCs(WordprocessingMLElement):
     # Parent element: rPr
     #TAG = 'bCs'
     pass
+
 
 class smallCaps(WordprocessingMLElement):
     # This element specifies that all small letter characters in this text run shall be formatted for display only as their
@@ -781,6 +799,7 @@ class smallCaps(WordprocessingMLElement):
     #TAG = 'smallCaps'
     pass
 
+
 class highlight(WordprocessingMLElement):
     # This element specifies a highlighting color which is applied as a background behind the contents of this run.
     # If this run has any background shading specified using the shd element, then the background shading
@@ -792,6 +811,7 @@ class highlight(WordprocessingMLElement):
     # Parent element: rPr
     #TAG = 'highlight'
     pass
+
 
 class rFonts(WordprocessingMLElement):
     # This element specifies the fonts which shall be used to display the text contents of this run. Within a single run,
@@ -807,6 +827,7 @@ class rFonts(WordprocessingMLElement):
     #TAG = 'rFonts'
     pass
 
+
 class sz(WordprocessingMLElement):
     # This element specifies the font size which shall be applied to all non complex script characters in the contents of
     # this run when displayed.
@@ -818,6 +839,7 @@ class sz(WordprocessingMLElement):
     # Parent element: rPr
     #TAG = 'sz'
     pass
+
 
 class szCs(WordprocessingMLElement):
     # This element specifies the font size which shall be applied to all complex script characters in the contents of this
@@ -831,6 +853,7 @@ class szCs(WordprocessingMLElement):
     #TAG = 'szCs'
     pass
 
+
 class lang(WordprocessingMLElement):
     # This element specifies the languages which shall be used to check spelling and grammar (if requested) when
     # processing the contents of this run.
@@ -841,6 +864,7 @@ class lang(WordprocessingMLElement):
     # Parent element: rPr
     #TAG = 'lang'
     pass
+
 
 class rStyle(WordprocessingMLElement):
     # This element specifies the style ID of the character style which shall be used to format the contents of this
@@ -856,6 +880,7 @@ class rStyle(WordprocessingMLElement):
     #TAG = 'rStyle'
     pass
 
+
 class color(WordprocessingMLElement):
     # This element specifies the color which shall be used to display the contents of this run in the document.
     # This color may be explicitly specified, or set to allow the consumer to automatically choose an appropriate color
@@ -864,6 +889,7 @@ class color(WordprocessingMLElement):
     # Parent element: rPr
     #TAG = 'color'
     pass
+
 
 class vertAlign(WordprocessingMLElement):
     # This element specifies the alignment which shall be applied to the contents of this run in relation to the default
@@ -891,6 +917,7 @@ class vertAlign(WordprocessingMLElement):
 
 ### Paragraph property classes	
 
+
 class pStyle(WordprocessingMLElement):
     # This element specifies the style ID of the paragraph style which shall be used to format the contents of this
     # paragraph.
@@ -905,6 +932,7 @@ class pStyle(WordprocessingMLElement):
     #TAG = 'pStyle'
     pass
 
+
 class ind(WordprocessingMLElement):
     # This element specifies the set of indentation properties applied to the current paragraph.
     # Indentation settings are overriden on an individual basis - if any single attribute on this element is omitted on a
@@ -915,6 +943,7 @@ class ind(WordprocessingMLElement):
     # Parent element: pPr
     #TAG = 'ind'
     pass
+
 
 class spacing(WordprocessingMLElement):
     # This element specifies the inter-line and inter-paragraph spacing which shall be applied to the contents of this
@@ -927,6 +956,7 @@ class spacing(WordprocessingMLElement):
     #TAG = 'spacing'
     pass
 
+
 class jc(WordprocessingMLElement):
     # This element specifies the paragraph alignment which shall be applied to text in this paragraph.
     # If this element is omitted on a given paragraph, its value is determined by the setting previously set at any level
@@ -936,6 +966,7 @@ class jc(WordprocessingMLElement):
     # Parent element: pPr
     #TAG = 'jc'
     pass
+
 
 class autoSpaceDE(WordprocessingMLElement):
     # This element specifies whether inter-character spacing shall automatically be adjusted between regions of Latin text and
@@ -951,6 +982,7 @@ class autoSpaceDE(WordprocessingMLElement):
     #TAG = 'autoSpaceDE'
     pass
 
+
 class autoSpaceDN(WordprocessingMLElement):
     # This element specifies whether inter-character spacing shall automatically be adjusted between regions of numbers and
     # regions of East Asian text in the current paragraph. These regions shall be determined by the Unicode character values
@@ -965,6 +997,7 @@ class autoSpaceDN(WordprocessingMLElement):
     #TAG = 'autoSpaceDN'
     pass
 
+
 class adjustRightInd(WordprocessingMLElement):
     # This element specifies whether the right indent shall be automatically adjusted for the given paragraph when a
     # document grid has been defined for the current section using the docGrid element, modifying of the current right
@@ -978,6 +1011,7 @@ class adjustRightInd(WordprocessingMLElement):
     # Parent element: pPr
     #TAG = 'adjustRightInd'
     pass
+
 
 class framePr(WordprocessingMLElement):
     # This element specifies information about the current paragraph with regard to text frames. Text
@@ -1002,6 +1036,7 @@ class framePr(WordprocessingMLElement):
 
 ### Paragraph properties - Tabs
 
+
 class tabs(WordprocessingMLElement):
     # This element specifies a sequence of custom tab stops which shall be used for any tab characters in the current paragraph.
     # If this element is omitted on a given paragraph, its value is determined by the setting previously set at any level of
@@ -1017,6 +1052,7 @@ class tabs(WordprocessingMLElement):
     #TAG = 'tabs'
     pass
 
+
 class tab(WordprocessingMLElement):
     # This element specifies a single custom tab stop within a set of custom tab stops applied as part of a set of
     # customized paragraph properties in a document.
@@ -1027,6 +1063,7 @@ class tab(WordprocessingMLElement):
 
 
 ### Paragraph Properties - Numbering Properties
+
 
 class numPr(WordprocessingMLElement):
     # This element specifies that the current paragraph references a numbering definition instance in the current
@@ -1044,6 +1081,7 @@ class numPr(WordprocessingMLElement):
     #TAG = 'numPr'
     pass
 
+
 class ilvl(WordprocessingMLElement):
     # This element specifies the numbering level of the numbering definition instance which shall be applied to the
     # parent paragraph.
@@ -1053,6 +1091,7 @@ class ilvl(WordprocessingMLElement):
     # Parent element: numPr
     #TAG  = 'ilvl'
     pass
+
 
 class numId(WordprocessingMLElement):
     # This element specifies the numbering definition instance which shall be used for the given parent numbered
@@ -1068,6 +1107,7 @@ class numId(WordprocessingMLElement):
 
 ### Paragraph properties - Section Properties
 
+
 class sectPr(WordprocessingMLElement):
     # This element defines the section properties for the a section of the document. Note: For the last section in the
     # document, the section properties are stored as a child element of the body element.
@@ -1079,6 +1119,7 @@ class sectPr(WordprocessingMLElement):
     # vAlign
     #TAG = 'sectPr'
     pass
+
 
 class headerReference(WordprocessingMLElement):
     # This element specifies a single header which shall be associated with the current section in the document. This
@@ -1107,6 +1148,7 @@ class headerReference(WordprocessingMLElement):
     # Parent element: sectPr
     #TAG = 'headerReference'
     pass
+
 
 class footerReference(WordprocessingMLElement):
     # This element specifies a single footer which shall be associated with the current section in the document. This
@@ -1137,6 +1179,7 @@ class footerReference(WordprocessingMLElement):
     #TAG = 'footerReference'
     pass
 
+
 class pgSz(WordprocessingMLElement):
     # This element specifies the properties (size and orientation) for all pages in the current section. The size values
     # are specified in twentieths of a point.
@@ -1145,12 +1188,14 @@ class pgSz(WordprocessingMLElement):
     #TAG = 'pgSz'
     pass
 
+
 class pgMar(WordprocessingMLElement):
     # This element specifies the page margins for all pages in this section. Values are specified in twentieths of a point.
     #
     # Parent element: sectPr
     #TAG = 'pgMar'
     pass
+
 
 class docGrid(WordprocessingMLElement):
     # This element specifies the settings for the document grid, which enables precise layout of full-width East Asian
@@ -1161,6 +1206,7 @@ class docGrid(WordprocessingMLElement):
     #TAG = 'docGrid'
     pass
 
+
 class pgNumType(WordprocessingMLElement):
     # This element specifies the page numbering settings for all page numbers that appear in the contents of the
     # current section.
@@ -1168,6 +1214,7 @@ class pgNumType(WordprocessingMLElement):
     # Parent element: sectPr
     #TAG = 'pgNumType'
     pass
+
 
 class cols(WordprocessingMLElement):
     # This element specifies the set of columns defined for this section in the document.
@@ -1177,6 +1224,7 @@ class cols(WordprocessingMLElement):
     # Child element: col
     #TAG = 'cols'
     pass
+
 
 class titlePg(WordprocessingMLElement):
     # This element specifies whether the parent section in this document shall have a different header and footer for
@@ -1196,6 +1244,7 @@ class titlePg(WordprocessingMLElement):
     #TAG = 'titlePg'
     pass
 
+
 class type(WordprocessingMLElement):
     # This element specifies the type of the current section. The section type specifies how the contents of the current
     # section shall be placed relative to the previous section.
@@ -1213,6 +1262,7 @@ class type(WordprocessingMLElement):
     #TAG = 'type'
     pass
 
+
 class vAlign(WordprocessingMLElement):
     # This element specifies the vertical alignment for text on pages in the current section, relative to the top and
     # bottom margins in the main document story on each page.
@@ -1222,6 +1272,7 @@ class vAlign(WordprocessingMLElement):
     pass
 
 ### Table classes
+
 class tbl(WordprocessingMLElement):
     # This element specifies the contents of a table present in the document. A table is a set of paragraphs (and other
     # block-level content) arranged in rows and columns. Tables in WordprocessingML are defined via the tbl element,
@@ -1399,6 +1450,7 @@ class tblGrid(WordprocessingMLElement):
     #TAG = 'tblGrid'
     pass
 
+
 class gridCol(WordprocessingMLElement):
     # This element specifies the presence and details about a single grid column within a table grid. A grid column is a
     # logical column in a table used to specify the presence of a shared vertical edge in the table. When table cells are
@@ -1408,6 +1460,7 @@ class gridCol(WordprocessingMLElement):
     # Parent elements: tblGrid
     #TAG = 'gridCol'
     pass
+
 
 class tblPr(WordprocessingMLElement):
     # This element specifies the set of table-wide properties applied to the current table. These properties affect the
@@ -1420,6 +1473,7 @@ class tblPr(WordprocessingMLElement):
     # tblpPr, tblPrChange, tblStyle, tblStyleColBandSize, tblStyleRowBandSize, tblW
     #TAG = 'tblPr'
     pass
+
 
 class tblW(WordprocessingMLElement):
     # This element specifies the preferred width for this table. This preferred width is used as part of the
@@ -1462,6 +1516,7 @@ class shd(WordprocessingMLElement):
     # table style. If no cell shading is specified in the style hierarchy, then the cells in this table shall not have
     # any cell shading (i.e. they shall be transparent).
     pass
+
 
 class tr(WordprocessingMLElement):
     # This element specifies a single table row, which contains the table’s cells. Table rows in WordprocessingML are
@@ -1619,6 +1674,7 @@ class tr(WordprocessingMLElement):
                 print("Using", thisbordercolor)
 
         return thisbordercolor
+
 
 class tc(WordprocessingMLElement):
     # This element specifies a single cell in a table row, which contains the table’s content. Table cells in
@@ -1823,6 +1879,7 @@ class tc(WordprocessingMLElement):
             vmerge += 1
         return vmerge
 
+
 class tcPr(WordprocessingMLPropertiesElement):
     # This element specifies the set of properties which shall be applied a specific table cell. Each unique property is
     # specified by a child element of this element. In any instance where there is a conflict between the table level,
@@ -1836,6 +1893,7 @@ class tcPr(WordprocessingMLPropertiesElement):
     #TAG = 'tcPr'
     pass
 
+
 class gridSpan(WordprocessingMLElement):
     # This element specifies the number of grid columns in the parent table's table grid which shall be spanned by the
     # current cell. This property allows cells to have the appearance of being merged, as they span vertical boundaries
@@ -1848,6 +1906,7 @@ class gridSpan(WordprocessingMLElement):
     #TAG = 'gridSpan'
     pass
 
+
 class vMerge(WordprocessingMLElement):
     # This element specifies that this cell is part of a vertically merged set of cells in a table. The val attribute on this
     # element determines how this cell is defined with respect to the previous cell in the table (i.e. does this cell
@@ -1859,6 +1918,7 @@ class vMerge(WordprocessingMLElement):
     # Parent element: tcPr
     #TAG = 'vMerge'
     pass
+
 
 class noWrap(WordprocessingMLElement):
     # This element specifies how this table cell shall be laid out when the parent table is displayed in a document. This
@@ -1879,6 +1939,7 @@ class noWrap(WordprocessingMLElement):
     #TAG = 'noWrap'
     pass
 
+
 class tcW(WordprocessingMLElement):
     # This element specifies the preferred width for this table cell. This preferred width is used as
     # part of the table layout algorithm specified by the tblLayout element (§2.4.49; §2.4.50) - full
@@ -1894,6 +1955,7 @@ class tcW(WordprocessingMLElement):
     # Parent elements: tcPr
     #TAG = 'tcW'
     pass
+
 
 class tblBorders(WordprocessingMLElement):
     # This element specifies the set of borders for the edges of the current table, using the six border types defined
@@ -1916,6 +1978,7 @@ class tblBorders(WordprocessingMLElement):
     #TAG = 'tblBorders'
     pass
 
+
 class bottom(WordprocessingMLElement):
     # This element specifies the border which shall be displayed at the bottom of the current table. The appearance of this
     # table border in the document shall be determined by the following settings:
@@ -1928,25 +1991,31 @@ class bottom(WordprocessingMLElement):
     #TAG = 'bottom'
     pass
 
+
 class insideH(WordprocessingMLElement):
     #TAG = 'insideH'
     pass
+
 
 class insideV(WordprocessingMLElement):
     #TAG = 'insideV'
     pass
 
+
 class left(WordprocessingMLElement):
     #TAG = 'left'
     pass
+
 
 class right(WordprocessingMLElement):
     #TAG = 'right'
     pass
 
+
 class top(WordprocessingMLElement):
     #TAG = 'top'
     pass
+
 
 class tcBorders(WordprocessingMLElement):
     # Parent element: tcPr
@@ -1954,6 +2023,7 @@ class tcBorders(WordprocessingMLElement):
     # Child elements:
     #TAG = 'tcBorders'
     pass
+
 
 class trPr(WordprocessingMLPropertiesElement):
     # This element specifies the set of row-level properties applied to the current table row. Each
@@ -1975,6 +2045,7 @@ class trPr(WordprocessingMLPropertiesElement):
             return int(gb.get('val'))
         return 0
 
+
 class trHeight(WordprocessingMLElement):
     # This element specifies the height of the current table row within the current table. This
     # height shall be used to determine the resulting height of the table row, which may be
@@ -1985,6 +2056,7 @@ class trHeight(WordprocessingMLElement):
     # Parent element: trPr
     #TAG = 'trHeight'
     pass
+
 
 class cantSplit(WordprocessingMLElement):
     # This element specifies whether the contents within the current cell shall be rendered on a
@@ -2004,6 +2076,7 @@ class cantSplit(WordprocessingMLElement):
     pass
 
 ### Misc classes
+
 
 class sym(WordprocessingMLElement):
     # This element specifies the presence of a symbol character at the current location in the run’s
@@ -2035,6 +2108,7 @@ class hyperlink(WordprocessingMLElement):
     # smartTag, subDoc
     #TAG = 'hyperlink'
     pass
+
 
 class bookmarkStart(WordprocessingMLElement):
     # This element specifies the start of a bookmark within a WordprocessingML document. This start marker is
@@ -2192,6 +2266,7 @@ class bookmarkStart(WordprocessingMLElement):
                 return True
         return False
 
+
 class bookmarkEnd(WordprocessingMLElement):
     # This element specifies the end of a bookmark within a WordprocessingML document. This end marker is matched with the
     # appropriately paired start marker by matching the value of the id attribute from the associated bookmarkStart element.
@@ -2204,6 +2279,7 @@ class bookmarkEnd(WordprocessingMLElement):
 
     def getBookmarkId(self):
         return self.get('id')
+
 
 class softHyphen(WordprocessingMLElement):
     # This element specifies that an optional hyphen character shall be placed at the current location in the run
@@ -2218,6 +2294,7 @@ class softHyphen(WordprocessingMLElement):
     #TAG = 'softHyphen'
     pass
 
+
 class br(WordprocessingMLElement):
     # This element specifies that a break shall be placed at the current location in the run content. A break is a special
     # character which is used to override the normal line breaking that would be performed based on the normal layout of
@@ -2231,6 +2308,7 @@ class br(WordprocessingMLElement):
     def getType(self):
         return self.get("type")
 
+
 class lastRenderedPageBreak(WordprocessingMLElement):
     # This element specifies that this position delimited the end of a page when this document was last saved by an application
     # which paginates its content.
@@ -2238,6 +2316,7 @@ class lastRenderedPageBreak(WordprocessingMLElement):
     # Parent element: r
     #TAG = 'lastRenderedPageBreak'
     pass
+
 
 class smartTag(WordprocessingMLElement):
     # This element specifies the presence of a smart tag around one or more inline structures (runs, images, fields, etc.)
@@ -2250,6 +2329,7 @@ class smartTag(WordprocessingMLElement):
         return self.get('element')
 
 ### Field codes
+
 
 class fldChar(WordprocessingMLElement):
     # This element specifies the presence of a complex field character at the current location in the parent run. A
@@ -2325,6 +2405,7 @@ class fldChar(WordprocessingMLElement):
             r = r.getNextContiguousRun()
         return rtext
 
+
 class instrText(WordprocessingMLElement):
     # This element specifies that this run contains field codes within a complex field in the document.
     # If this element is contained within a run which is not part of a complex field's field codes, then it and its contents
@@ -2332,6 +2413,7 @@ class instrText(WordprocessingMLElement):
     #
     # Parent element: r
     pass
+
 
 class fldSimple(WordprocessingMLElement):
     # This element specifies the presence of a simple field at the current location in the document. The semantics of
@@ -2355,6 +2437,7 @@ class fldSimple(WordprocessingMLElement):
             ct += t.getText()
         return ct
 
+
 class noProof(WordprocessingMLElement):
     # This element specifies that the contents of this run shall not report any errors when the document is scanned for
     # spelling and grammar.
@@ -2365,6 +2448,7 @@ class noProof(WordprocessingMLElement):
     # Parent element: rPr
     #TAG = 'noProof'
     pass
+
 
 class drawing(WordprocessingMLElement):
     # This element specifies that a DrawingML object is located at this position in the run’s contents. The layout
@@ -2421,6 +2505,7 @@ class drawing(WordprocessingMLElement):
         imh = float(extentnode.get('cy', False).replace(',','.'))/360100
         return (imw, imh)
 
+
 class pict(WordprocessingMLElement):
     # This element specifies that an object is located at this position in the run’s contents. The layout
     # properties of this object are specified using the VML syntax
@@ -2433,25 +2518,31 @@ class pict(WordprocessingMLElement):
 
 ### Numbering definitions
 
+
 class numbering(WordprocessingMLElement):
     #TAG = 'numbering'
     pass
+
 
 class abstractNum(WordprocessingMLElement):
     #TAG = 'abstractNum'
     pass
 
+
 class lvl(WordprocessingMLElement):
     #TAG = 'lvl'
     pass
+
 
 class numFmt(WordprocessingMLElement):
     #TAG = 'numFmt'
     pass
 
+
 class num(WordprocessingMLElement):
     #TAG = 'num'
     pass
+
 
 class abstractNumId(WordprocessingMLElement):
     #TAG = 'abstractNumId'
