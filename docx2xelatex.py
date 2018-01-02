@@ -2,42 +2,35 @@ from docxFrame import *
 from UnicodeToLaTeXLibrary import *
 
 
-class ConversionConfiguration(object): # ConversionTracker?
+class ConversionConfiguration(object):
     def __init__(self):
         self.style2heading = {
             'Kop1': 'chapter',
             'Heading1': 'chapter',
+
             'Kop2': 'section',
             'Heading2': 'section',
+
             'Kop3': 'subsection',
             'Heading3': 'subsection',
+
             'Kop4': 'subsubsection',
             'Heading4': 'subsubsection',
+
             'Kop5': 'paragraph',
             'Heading5': 'paragraph',
+
             'Kop7': 'subparagraph',
             'Heading7': 'subparagraph',
+
             'Kop9': 'sssssssSection',
             'Heading9': 'sssssssSection',
-            'ZinkHeading1': 'chapter',
-            'ZinkHeading2': 'section',
-            'ZinkHeading3': 'subsection',
-            'ZinkHeading4': 'subsubsection'
         }
         self.style2environment = {
             'quotation': 'quotation',
             'quote': 'quotation',
             'quotation_original': 'quotation_original',
             'quotation_translation': 'quotation_translation',
-            'chapterquotation': 'chapterquotation',
-            'chapterquote': 'chapterquotation',
-            'blocktext': 'zinkquotation',
-            'zinkquotation': 'zinkquotation',
-            'zinkdescription': 'zinkdescription',
-            'zinkequation': 'zinkequation',
-            'blockquote': 'zinkquotation',
-            'elegant': 'zinkelegant',
-            'sansserif': 'zinksansserif',
         }
         self.styleproperty2command = {
             'b': 'textbf',
@@ -256,7 +249,6 @@ class XeLaTeXCode(object):
     def writeRootFile(self, fpath, fnames):
         root = ""
         root += "\\documentclass[10pt]{memoir}\n"
-        root += "\\usepackage{zinkLood}\n"
         root += "\\begin{document}\n"
 
         root += self.getColorDefinitions()
@@ -281,6 +273,7 @@ class XeLaTeXCode(object):
             fname = basename + "_" + c + ".tex"
             fnames.append(fname)
             fpath = os.path.join(folder, fname)
+            print("Writing content file {:s}".format(fpath))
             fp = open(fpath, "w")
             fp.write(self.data[c])
             fp.close()
@@ -288,8 +281,9 @@ class XeLaTeXCode(object):
 
 
 class docx2xelatex(object):
-    def __init__(self, docx):
+    def __init__(self, docx, verbose=False):
         self.docx = docx
+        self.verbose = verbose
         self.docxfilename = self.docx.filename
         self.basefilename = os.path.splitext(self.docxfilename)[0]
         self.folder = self.docx.folder
@@ -300,11 +294,12 @@ class docx2xelatex(object):
         self.config = ConversionConfiguration()
         self.xelatexcode = self.config.xelatexcode
 
-        print()
-        print("Converting {:s} to xelatex".format(self.docxfilename))
-        print("Base filename: {:s}".format(self.basefilename))
-        print("Folder: {:s}".format(self.docx.folder))
-        print()
+        if self.verbose:
+            print()
+            print("Converting {:s} to xelatex".format(self.docxfilename))
+            print("Base filename: {:s}".format(self.basefilename))
+            print("Folder: {:s}".format(self.docx.folder))
+            print()
 
         self.docx.documentxml.save(filename=os.path.join(self.outputfolder, 'document_orig.xml'), pretty_print=True)
         if self.docx.footnotesxml is not None:
@@ -312,16 +307,18 @@ class docx2xelatex(object):
 
     def buildReferenceList(self):
         itexts = []
-        print()
-        print("==============================")
-        print("  Building list of references")
-        print("==============================")
-        print()
-        print("Document body:")
+        if self.verbose:
+            print()
+            print("==============================")
+            print("  Building list of references")
+            print("==============================")
+            print()
+            print("Document body:")
         d_itexts = self.findFieldInstructions(self.docx.documentxml.getBody())
         itexts.extend(i for i in d_itexts if i not in itexts)
         if self.docx.footnotesxml is not None:
-            print("Document footnotes:")
+            if self.verbose:
+                print("Document footnotes:")
             f_itexts = self.findFieldInstructions(self.docx.footnotesxml.getFootnotes())
             itexts.extend(i for i in f_itexts if i not in itexts)
 
@@ -330,36 +327,39 @@ class docx2xelatex(object):
             fieldcodes = i.split()
             if fieldcodes[0] == "REF" or fieldcodes[0] == "NOTEREF" or fieldcodes[0] == "PAGEREF" and fieldcodes[1].find("_Toc")<0:
                 self.config.references.append(fieldcodes[1])
-        #print(str(self.config.references))
-        print()
-        print("Found {:d} references".format(len(self.config.references)))
-        print()
-        input()
+        if self.verbose:
+            print()
+            print("Found {:d} references".format(len(self.config.references)))
+            print()
+            input()
 
     def buildBookmarks(self):
-        print()
-        print("===============================")
-        print("  Building list of bookmarks")
-        print("===============================")
-        print()
+        if self.verbose:
+            print()
+            print("===============================")
+            print("  Building list of bookmarks")
+            print("===============================")
+            print()
         bms = self.docx.documentxml.getBody().findAll('bookmarkStart')
-        print()
-        print("Found {:d} bookmarks".format(len(bms)))
-        print()
+        if self.verbose:
+            print()
+            print("Found {:d} bookmarks".format(len(bms)))
+            print()
         for bm in bms:
             BookmarkProcessor(self, bm)
-        print()
-        print("Found {:d} referenced bookmarks".format(len(self.config.bookmarks)))
-        #print(str(self.config.bookmarks))
-        print()
-        input()
+        if self.verbose:
+            print()
+            print("Found {:d} referenced bookmarks".format(len(self.config.bookmarks)))
+            print()
+            input()
 
     def buildCaptions(self):
-        print()
-        print("==============================")
-        print("  Building list of captions")
-        print("==============================")
-        print()
+        if self.verbose:
+            print()
+            print("==============================")
+            print("  Building list of captions")
+            print("==============================")
+            print()
 
         lastnode = None
         openbookmarks = {}
@@ -382,17 +382,19 @@ class docx2xelatex(object):
             self.config.currentcaptionp = None
             self.config.currentcaptionlabels = {}
 
-        print()
-        print("Found {:d} captions".format(len(self.config.captions)))
-        print()
-        input()
+        if self.verbose:
+            print()
+            print("Found {:d} captions".format(len(self.config.captions)))
+            print()
+            input()
 
     def buildTableCaptions(self):
-        print()
-        print("==============================")
-        print("  Building list of table captions")
-        print("==============================")
-        print()
+        if self.verbose:
+            print()
+            print("==============================")
+            print("  Building list of table captions")
+            print("==============================")
+            print()
 
         openbookmarks = {}
         for n in self.docx.getDocumentBody().iter():
@@ -408,18 +410,19 @@ class docx2xelatex(object):
             self.config.currenttablecaptiontbl = None
             self.config.currentcaptionlabels = {}
 
-        print()
-        print("Found {:d} table captions".format(len(self.config.tablecaptions)))
-        print()
-        input()
+        if self.verbose:
+            print()
+            print("Found {:d} table captions".format(len(self.config.tablecaptions)))
+            print()
+            input()
 
     def buildTableNotes(self):
-        print()
-        print("==============================")
-        print("  Building list of table notes")
-        print("==============================")
-        print()
-        #lasttable = None
+        if self.verbose:
+            print()
+            print("==============================")
+            print("  Building list of table notes")
+            print("==============================")
+            print()
 
         for n in self.docx.getDocumentBody().iter():
             if n.tag == W+'p' and n.isTableNote(self.config.tablenotestyles):
@@ -428,9 +431,6 @@ class docx2xelatex(object):
             elif n.tag == W+'tbl':
                 pass
             else:
-                #if lasttable is not None:
-                #	print("End table")
-                #	lasttable = None
                 pass
 
         if self.config.currenttablenotetbl is not None:
@@ -438,21 +438,24 @@ class docx2xelatex(object):
             self.config.currenttablenotetbl = None
             self.config.currenttablenotelabels = {}
 
-        print()
-        print("Found {:d} table notes".format(len(self.config.tablenotes)))
-        print()
-        input()
+        if self.verbose:
+            print()
+            print("Found {:d} table notes".format(len(self.config.tablenotes)))
+            print()
+            input()
 
     def findFieldInstructions(self, node):
         itexts = []
         flds = node.findAll('fldChar')
         fflds = [f for f in flds if f.isBegin()]
-        print("Found {:d} complex fields".format(len(fflds)))
+        if self.verbose:
+            print("Found {:d} complex fields".format(len(fflds)))
         for f in fflds:
             itexts.append(f.getInstructionText())
 
         sflds = node.findAll('fldSimple')
-        print("Found {:d} simple fields".format(len(sflds)))
+        if self.verbose:
+            print("Found {:d} simple fields".format(len(sflds)))
         for f in sflds:
             itexts.append(f.get('instr'))
 
@@ -508,12 +511,13 @@ class docx2xelatex(object):
 # Processors
 
 class Processor(object):
-    def __init__(self, parentprocessor, node):
+    def __init__(self, parentprocessor, node, verbose=False):
         self.parentprocessor = parentprocessor
         self.config = self.parentprocessor.config
         self.node = node
         self.docx = self.parentprocessor.docx
         self.xelatexcode = self.parentprocessor.xelatexcode
+        self.verbose = verbose
         self.process()
 
     def process(self):
@@ -526,9 +530,10 @@ class ParagraphProcessor(Processor):
         self.config.inHeading = True
         if h == 'chapter':
             self.config.newChapter()
-            print()
-            print("New chapter: {:s}".format(self.node.getText()))
-            print()
+            if self.verbose:
+                print()
+                print("New chapter: {:s}".format(self.node.getText()))
+                print()
         self.xelatexcode.addNL()
         self.xelatexcode.append('\\'+h+'{')
 
@@ -833,7 +838,8 @@ class SymProcessor(Processor):
         uc = self.config.fontconvertor.getUnicode(f, c)
         l = LaTeXizer(self, uc, isString=True)
         s = l.getXeLaTeXString()
-        print("Sym: {:s}".format(s))
+        if self.verbose:
+            print("Sym: {:s}".format(s))
         self.xelatexcode.append(s)
 
 
@@ -866,11 +872,11 @@ class FootnoteProcessor(Processor):
 class TableProcessor(Processor):
     def arabicToAlphabetic(self, a):
         b = 0
-        while a>26:
+        while a > 26:
             a -= 26
             b += 1
 
-        if b>0:
+        if b > 0:
             firstletter = chr(ord("@")+b)
         else:
             firstletter = ""
@@ -1390,8 +1396,9 @@ class BookmarkProcessor(Processor):
         bid = self.node.getBookmarkId()
         bname = self.node.getBookmarkName()
         if bname in self.config.references:
-            print("=========================")
-            print("Bookmark id: "+bid+"; name: "+bname)
+            if self.verbose:
+                print("=========================")
+                print("Bookmark id: "+bid+"; name: "+bname)
             btype, blink = self.node.getBookmarkType(self.config.style2heading.keys(), self.config.floatnames, self.config.captionstyles.keys())
             if btype == 'Equation':
                 eq = self.selectEquation(blink)
@@ -1411,8 +1418,9 @@ class BookmarkProcessor(Processor):
             self.config.bookmarks[blink] = {'type':btype, 'label':blabel, 'name':bname, 'id':bid}
             self.config.labels[bname] = blabel
 
-            print("Bookmark link: "+str(blink))
-            print("Bookmark type: "+btype)
+            if self.verbose:
+                print("Bookmark link: "+str(blink))
+                print("Bookmark type: "+btype)
 
     def selectEquation(self, blink):
         prevEq, nextEq = self.findSurroundingEquations(blink)

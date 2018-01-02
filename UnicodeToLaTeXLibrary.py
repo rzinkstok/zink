@@ -25,13 +25,14 @@ class FontEncodingConvertorError(Exception):
 
 
 class UnicodeToLaTeXLibrary:
-    def __init__(self, libfilename=None):
+    def __init__(self, libfilename=None, verbose=False):
         self.latexchardict = {}
         self.xelatexchardict = {}
         self.latexmathchardict = {}
         if libfilename is None:
             libfilename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "UnicodeToLaTeXLibrary.xml")
         self.libraryfilename = libfilename
+        self.verbose = verbose
         self.loadXMLToDict()
     
     def loadXMLToDict(self):
@@ -47,12 +48,14 @@ class UnicodeToLaTeXLibrary:
             cp = int(char.findtext('codepoint'))
             lc = char.findtext('latexcode')
             self.latexchardict[cp] = lc
-            print("{0} -> {1}".format(cp, lc))
+            if self.verbose:
+                print("{0} -> {1}".format(cp, lc))
             try:
                 name = ucd.name(chr(cp))
             except ValueError:
                 name = "NONE"
-            print("Loading latex character {:s} ({:d} {:s})".format(lc, cp, name))
+            if self.verbose:
+                print("Loading latex character {:s} ({:d} {:s})".format(lc, cp, name))
         
         # xelatex chars
         chars = xml.findall('xelatex-char')
@@ -65,7 +68,8 @@ class UnicodeToLaTeXLibrary:
                 name = ucd.name(chr(cp))
             except ValueError:
                 name = "NONE"
-            print("Loading xelatex character {:s} ({:d} {:s})".format(lc, cp, name))
+            if self.verbose:
+                print("Loading xelatex character {:s} ({:d} {:s})".format(lc, cp, name))
         
         # latex math chars
         chars = xml.findall('latex-math-char')
@@ -75,7 +79,8 @@ class UnicodeToLaTeXLibrary:
             lc = char.findtext('latexmathcode')
             self.latexmathchardict[cp] = lc
             name = ucd.name(chr(cp))
-            print("Loading latex math character {:s} ({:d} {:s})".format(lc, cp, name))
+            if self.verbose:
+                print("Loading latex math character {:s} ({:d} {:s})".format(lc, cp, name))
         
     def openXML(self, filename, mode='r'):
         if os.path.splitext(filename)[1] != '.xml':
@@ -86,11 +91,12 @@ class UnicodeToLaTeXLibrary:
         return xml
     
     def buildXML(self):
-        print() 
-        print("Building XML file from database...")
-        print("----------------------------------")
-        print()
-        
+        if self.verbose:
+            print()
+            print("Building XML file from database...")
+            print("----------------------------------")
+            print()
+
         characters = ET.Element('characters')
                 
         for cp in sorted(self.latexchardict.keys()):
@@ -99,7 +105,8 @@ class UnicodeToLaTeXLibrary:
                 name = ucd.name(chr(cp))
             except ValueError:
                 name = "?"
-            print("Adding latex character {:s} ({:d} {:s})".format(lc, cp, name))
+            if self.verbose:
+                print("Adding latex character {:s} ({:d} {:s})".format(lc, cp, name))
             char = ET.SubElement(characters, 'latex-char')
             charcp = ET.SubElement(char, 'codepoint')
             charcp.text = "{:d}".format(cp)
@@ -111,7 +118,8 @@ class UnicodeToLaTeXLibrary:
         for cp in sorted(self.xelatexchardict.keys()):
             lc = self.xelatexchardict[cp]
             name = ucd.name(chr(cp))
-            print("Adding xelatex character {:s} ({:d} {:s})".format(lc, cp, name))
+            if self.verbose:
+                print("Adding xelatex character {:s} ({:d} {:s})".format(lc, cp, name))
             char = ET.SubElement(characters, 'xelatex-char')
             charcp = ET.SubElement(char, 'codepoint')
             charcp.text = "{:d}".format(cp)
@@ -123,7 +131,8 @@ class UnicodeToLaTeXLibrary:
         for cp in sorted(self.latexmathchardict.keys()):
             lc = self.latexmathchardict[cp]
             name = ucd.name(chr(cp))
-            print("Adding latex math character {:s} ({:d} {:s})".format(lc, cp, name))
+            if self.verbose:
+                print("Adding latex math character {:s} ({:d} {:s})".format(lc, cp, name))
             char = ET.SubElement(characters, 'latex-math-char')
             charcp = ET.SubElement(char, 'codepoint')
             charcp.text = "{:d}".format(cp)
@@ -186,10 +195,11 @@ class UnicodeToLaTeXLibrary:
             
 
 class FontEncodingConvertor:
-    def __init__(self, mapfilename=None):
+    def __init__(self, mapfilename=None, verbose=False):
         if mapfilename is None:
             mapfilename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "FontEncodingMap.xml")
         self.mapfilename = mapfilename
+        self.verbose = verbose
         self.buildMap()
     
     def buildMap(self):
@@ -199,14 +209,15 @@ class FontEncodingConvertor:
         
         for font in fontnodes:
             fontname = font.attrib['name']
-            print(fontname)
+            if self.verbose:
+                print(fontname)
             self.map[fontname] = {}
             for cp in font:
                 origcp = int(cp.findtext('original'))
-                print(origcp)
                 unicodecp = int(cp.findtext('unicode'))
                 self.map[fontname][origcp] = unicodecp
-        print(self.map)
+        if self.verbose:
+            print(self.map)
         
     def openXML(self, filename, mode='r'):
         if os.path.splitext(filename)[1] != '.xml':
