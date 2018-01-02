@@ -1,6 +1,4 @@
 #!/Library/Frameworks/Python.framework/Versions/3.1/bin/python
-import sys
-import os
 
 
 from lxml import etree as ET

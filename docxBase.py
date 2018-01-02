@@ -1,17 +1,17 @@
 ###!/Library/Frameworks/Python.framework/Versions/3.1/bin/python
 
-import sys
 import os
-import shutil
-import subprocess
 import zipfile
-import codecs
-import unittest
 from lxml import etree as ET
 
 
-class DocxFileError(Exception): pass
-class DocxXMLError(Exception): pass
+class DocxFileError(Exception):
+    pass
+
+
+class DocxXMLError(Exception):
+    pass
+
 
 ### DocX file class
 
