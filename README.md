@@ -4,12 +4,12 @@ A simple to use tool to convert Word docx files to XeLaTeX code, ready to compil
 
 ### Dependencies
 
-docx2xelatex uses python3, and needs a full TexLive installation. Furthermore, 
-it uses lxml for all xml juggling. Lxml can be installed using pip:
+docx2xelatex uses python3, and uses lxml for all xml juggling. Lxml can be installed using pip:
 ```
 $ pip install lxml
 ``` 
 
+For compiling the resulting XeLaTeX file, of course you will need TeXLive, which contains TeX, LaTeX and XeLaTeX. 
 TexLive can be downloaded for your platform from https://www.tug.org/texlive/
 
 ### Usage
@@ -32,7 +32,7 @@ The following objects are supported:
 - footnotes
 - figures
 - tables
-- captions for figures and tables (if tagged with teh appropriate styles)
+- captions for figures and tables (if tagged with the appropriate styles)
 - notes for tables
 - equations
 - fields (fields must be updated in the document before conversion)
