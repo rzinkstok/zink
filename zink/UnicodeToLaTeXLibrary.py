@@ -1,4 +1,4 @@
-#    Copyright 2018 Roel Zinkstok
+#    Copyright 2007-2018 Roel Zinkstok
 #
 #    This file is part of zink.
 #
