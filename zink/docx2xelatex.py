@@ -15,9 +15,10 @@
 #    You should have received a copy of the GNU General Public License
 #    along with zink.  If not, see <http://www.gnu.org/licenses/>.
 
+
 import subprocess
 import shutil
-from .docxFrame import *
+from .docxElements import *
 from .UnicodeToLaTeXLibrary import *
 
 

@@ -16,7 +16,7 @@
 #    along with zink.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from .docxFrame import *
+from .docxElements import *
 from .UnicodeToLaTeXLibrary import *
 
 
