@@ -100,7 +100,7 @@ class DocX:
         Extract a file from the zipfile of the docx file to a specified target location.
         """
 
-        zf = zipfile.ZipFile(self.filename)
+        zf = zipfile.ZipFile(self.path)
         zf.extract(name, target)
         zf.close()
 

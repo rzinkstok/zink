@@ -17,8 +17,8 @@
 
 import subprocess
 import shutil
-from docxFrame import *
-from UnicodeToLaTeXLibrary import *
+from .docxFrame import *
+from .UnicodeToLaTeXLibrary import *
 
 
 class ConversionConfiguration(object):
@@ -268,6 +268,11 @@ class XeLaTeXCode(object):
     def writeRootFile(self, fpath, fnames):
         root = ""
         root += "\\documentclass[10pt]{memoir}\n"
+        root += "\\usepackage{graphicx}\n"
+        root += "\\usepackage{multirow}\n"
+        root += "\\usepackage[table]{xcolor}\n"
+        root += "\\usepackage{color}\n"
+        root += "\\usepackage{ctable}\n"
         root += "\\begin{document}\n"
 
         root += self.getColorDefinitions()
@@ -536,6 +541,7 @@ class Processor(object):
         self.node = node
         self.docx = self.parentprocessor.docx
         self.xelatexcode = self.parentprocessor.xelatexcode
+        self.outputfolder = parentprocessor.outputfolder
         self.verbose = verbose
         self.process()
 
@@ -889,17 +895,16 @@ class FootnoteProcessor(Processor):
 
 
 class TableProcessor(Processor):
-    def arabicToAlphabetic(self, a):
-        b = 0
-        while a > 26:
-            a -= 26
-            b += 1
-
-        if b > 0:
-            firstletter = chr(ord("@")+b)
+    def arabicToAlphabetic(self, num):
+        a, b = divmod(num, 26)
+        if a > 0:
+            res = chr(ord("@")+a)
         else:
-            firstletter = ""
-        return firstletter + chr(ord("@")+a)
+            res = ""
+        res += chr(ord("@")+b)
+        if res == "@":
+            return ""
+        return res
 
     def process(self):
         suppressTable = not self.node.hasText('()0123456789', ['Caption', 'Figurenote', 'Tablenote', 'Tablenote0'])
@@ -907,7 +912,7 @@ class TableProcessor(Processor):
         self.config.startTable(suppressTable)
 
         if not suppressTable:
-            tableid = "tabc"+self.arabicToAlphabetic(self.config.currentChapter)+"t"+self.arabicToAlphabetic(self.config.currentTable) # ord("@") = ord("A") - 1
+            tableid = "tabc"+self.arabicToAlphabetic(self.config.currentChapter)+"t"+self.arabicToAlphabetic(self.config.currentTable)
             if self.node in self.config.tablenotes:
                 tablenotes = self.config.tablenotes[self.node]
             else:
@@ -937,7 +942,8 @@ class TableProcessor(Processor):
                 self.xelatexcode.addNL()
                 self.xelatexcode.append("\twidth="+tablewidth+",%")
                 self.xelatexcode.addNL()
-                self.xelatexcode.append("\tdoinside=\\tablefont\\tiny,%")
+                #self.xelatexcode.append("\tdoinside=\\tablefont\\tiny,%")
+                self.xelatexcode.append("\tdoinside=\\tiny,%")
                 self.xelatexcode.addNL()
                 self.xelatexcode.append("\tcaption={")
                 if self.node in self.config.tablecaptions:
@@ -1348,9 +1354,7 @@ class DrawingProcessor(Processor):
         if refID is None:
             print("Skipping drawing (no reference ID found)")
             self.xelatexcode.addNL()
-            #self.xelatexcode.append("%% Drawing omitted")
             self.xelatexcode.addNL()
-            #return
         else:
             sx, sy = self.node.getImageSize()
 
@@ -1360,7 +1364,7 @@ class DrawingProcessor(Processor):
             filename = os.path.split(zippath)[-1]
 
             mediadirname = "media"
-            mediapath = os.path.join(self.docx.path, "media")
+            mediapath = os.path.join(self.parentprocessor.outputfolder, "media")
             if not os.path.exists(mediapath):
                 os.mkdir(mediapath)
             self.docx.extractMediaFile(zippath, mediapath)

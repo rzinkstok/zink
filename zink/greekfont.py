@@ -16,8 +16,8 @@
 #    along with zink.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from docxFrame import *
-from UnicodeToLaTeXLibrary import *
+from .docxFrame import *
+from .UnicodeToLaTeXLibrary import *
 
 
 def processP(p):
