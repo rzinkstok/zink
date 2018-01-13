@@ -1,4 +1,5 @@
 *.pyc
+*.doc
 .idea/
 __pycache__/
-testdata/
+testdata_private/

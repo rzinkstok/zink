@@ -17,37 +17,38 @@
 
 
 from lxml import etree as ET
-import docxBase
+from zink import docxBase
 
 
-class PackageRelationshipsElement(docxBase.OfficeOpenXMLElement):
+class MarkupCompatibilityElement(docxBase.OfficeOpenXMLElement):
     def _init(self):
-        self.nsprefix = 'rel'
+        self.nsprefix = 'mc'
 
     def get(self, key, default=None):
-        # The Relationships XML file does not use prefixes!
+        # The Markup Compatibility XML file does not use prefixes!
         return ET.ElementBase.get(self, key, default)
 
 
-class Relationships(PackageRelationshipsElement):
+class AlternateContent(MarkupCompatibilityElement):
+    """
+    The AlternateContent element contains the full set of all possible markup alternatives. Each possible
+    alternative is contained within either a Choice or Fallback child element of the AlternateContent element.
+    """
     pass
 
 
-class Relationship(PackageRelationshipsElement):
+class Choice(MarkupCompatibilityElement):
+    def getDependency(self):
+        return self.get('Requires')
+
+
+class Fallback(MarkupCompatibilityElement):
     pass
 
 
-REL_NS = "http://schemas.openxmlformats.org/package/2006/relationships"
-REL = "{%s}" % REL_NS
-docxBase.NSMAP['rel'] = REL_NS
+MC_NS = "http://schemas.openxmlformats.org/markup-compatibility/2006"
+MC = "{%s}" % MC_NS
+docxBase.NSMAP['mc'] = MC_NS
 
-R_NS = "http://schemas.openxmlformats.org/officeDocument/2006/relationships"
-R = "{%s}" % R_NS
-docxBase.NSMAP['r'] = R_NS
-
-namespace = docxBase.lookup.get_namespace(REL_NS)
+namespace = docxBase.lookup.get_namespace(MC_NS)
 namespace.update(vars())
-
-
-
-

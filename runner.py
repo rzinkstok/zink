@@ -16,16 +16,18 @@
 #    along with zink.  If not, see <http://www.gnu.org/licenses/>.
 
 
-from docxBase import DocX
-from docx2xelatex import *
+from zink import *
 import os
 import sys
 
 if __name__ == "__main__":
-    fn = sys.argv[1]
-    if not os.path.exists(fn):
-        print("File does not exist!")
-        sys.exit()
+    if len(sys.argv) > 1:
+        fn = sys.argv[1]
+        if not os.path.exists(fn):
+            print("File does not exist!")
+            sys.exit()
+    else:
+        fn = "testdata/test.docxBase.DocX.2.docx"
 
     d = DocX(fn)
     processor = docx2xelatex(d)

@@ -16,7 +16,7 @@
 #    along with zink.  If not, see <http://www.gnu.org/licenses/>.
 
 
-import docxBase
+from zink import docxBase
 
 
 class CorePropertiesElement(docxBase.OfficeOpenXMLElement):

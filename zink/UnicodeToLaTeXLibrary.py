@@ -46,7 +46,7 @@ class UnicodeToLaTeXLibrary:
         self.xelatexchardict = {}
         self.latexmathchardict = {}
         if libfilename is None:
-            libfilename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "UnicodeToLaTeXLibrary.xml")
+            libfilename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xml", "UnicodeToLaTeXLibrary.xml")
         self.libraryfilename = libfilename
         self.verbose = verbose
         self.loadXMLToDict()
@@ -213,7 +213,7 @@ class UnicodeToLaTeXLibrary:
 class FontEncodingConvertor:
     def __init__(self, mapfilename=None, verbose=False):
         if mapfilename is None:
-            mapfilename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "FontEncodingMap.xml")
+            mapfilename = os.path.join(os.path.dirname(os.path.abspath(__file__)), "xml", "FontEncodingMap.xml")
         self.mapfilename = mapfilename
         self.verbose = verbose
         self.buildMap()

@@ -16,20 +16,9 @@
 #    along with zink.  If not, see <http://www.gnu.org/licenses/>.
 
 
-import WordprocessingML
-import DrawingML
-import MathML
-import Relationships
-import Metadata
-import MarkupCompatibility
-
-W = WordprocessingML.W
-A = DrawingML.A
-WP = DrawingML.WP
-PIC = DrawingML.PIC
-M = MathML.M
-REL = Relationships.REL
-R = Relationships.R
-CP = Metadata.CP
-DC = Metadata.DC
-MC = MarkupCompatibility.MC
+from .Metadata import CP, DC
+from .WordprocessingML import W
+from .MathML import M
+from .DrawingML import A, WP, PIC
+from .Relationships import REL, R
+from .MarkupCompatibility import MC
